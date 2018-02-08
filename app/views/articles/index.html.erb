@@ -1,5 +1,7 @@
 
 <h1>Articles</h1>
+<%= link_to 'Add new articles', new_article_path %>
+
 <table>
 	<tr>
 		<th>Title</th>
@@ -13,4 +15,7 @@
 			<td><%= link_to 'Read more', article_path(article) %></td>
 		</tr>
 	<% end %>
-</table>
+</table></br>
+
+
+<%=link_to 'Homepage', root_path %>
