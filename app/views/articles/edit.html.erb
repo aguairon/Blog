@@ -1,5 +1,4 @@
-
-<h1>New Article</h1>
+<h1>Edit article</h1>
 
 <%= form_with(model: @article) do |form| %>
  
@@ -30,21 +29,7 @@
     <%= form.submit %>
   </p>
  
-<% end %> 
+<% end %>
 
 <%= link_to 'Back', articles_path%></br>
 <%= link_to 'Homepage', root_path %>
-<!-- <form action="/my-handling-form-page" method="post">
-    <div>
-        <label for="title">Name:</label>
-        <input type="text" id="name" name="user_name">
-    </div>
-    <div>
-        <label for="mail">E-mail:</label>
-        <input type="email" id="mail" name="user_mail">
-    </div>
-    <div>
-        <label for="msg">Message:</label>
-        <textarea id="msg" name="user_message"></textarea>
-    </div>
-</form> -->
