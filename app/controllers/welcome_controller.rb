@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-  	@articles = Article.all
+  	@periods = Period.all
   end
 end
