@@ -3,5 +3,5 @@
 <%= link_to 'New Period', new_period_path %>
 
 <% @periods.each do |period| %>
-		<div><%= link_to period.title, articles_path %></div>
+		<div><%= link_to period.title, period_path(period) %></div>
 <% end %>
