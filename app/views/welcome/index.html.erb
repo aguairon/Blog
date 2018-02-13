@@ -1,3 +1,7 @@
-<h1>Hello, Begona Fernandez</h1>
+<h1>Historias interesantes</h1>
+<h2>Periodos historicos</h2>
+<%= link_to 'New Period', new_period_path %>
 
-<h2><%= link_to 'Periods', controller: 'periods'%></h2>
+<% @periods.each do |period| %>
+		<div><%= link_to period.title, articles_path %></div>
+<% end %>
