@@ -11,6 +11,8 @@ class ArticlesController < ApplicationController
 
 	def new
 		@article = Article.new
+	
+		@article.period = Period.find(params[:period_id])
 	end
 
 	def edit
