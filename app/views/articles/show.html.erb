@@ -1,7 +1,10 @@
 <h1><%= @article.title %></h1>
 
-<div>
-	<%= @article.text %>
+<div class="article">
+	<%= @article.text %><br><br>
+	<%= link_to 'Back', articles_path %>
+	<%= link_to 'Edit', edit_article_path(@article) %></br>
+
 </div>
 
 <h2>Comments</h2>
@@ -9,6 +12,3 @@
 
 <h3>Add a comment:</h3>
 <%= render 'comments/form' %>
-
-<%= link_to 'Back', articles_path %></br>
-<%= link_to 'Edit', edit_article_path(@article) %></br>
