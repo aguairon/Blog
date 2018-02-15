@@ -8,7 +8,6 @@
 		<th>Text</th>
 	</tr>
 
-<%= render @articles%>
-
+<%= render :partial => "aplication/article", :collection => @articles %>
 
 <%=link_to 'Homepage', root_path %>
