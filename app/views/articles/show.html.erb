@@ -6,9 +6,10 @@
 	<%= link_to 'Edit', edit_article_path(@article) %></br>
 
 </div>
+<div class="comments">
+	<h2>Comments</h2>
+	<%= render @article.comments%>
 
-<h2>Comments</h2>
-<%= render @article.comments%>
-
-<h3>Add a comment:</h3>
-<%= render 'comments/form' %>
+	<h3>Add a comment:</h3>
+	<%= render 'comments/form' %>
+</div>
