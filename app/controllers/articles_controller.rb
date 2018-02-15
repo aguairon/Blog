@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 
 	def new
 		@article = Article.new
+		# http://localhost:3000/articles/new?period_id=1
 	
 		@article.period = Period.find(params[:period_id])
 	end
@@ -20,7 +21,11 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		@article = Article.new(article_params)
+		# @article = Article.new(article_params)
+		@period = Period.find(@article.period)
+		@article = period.articles.create(article_params)
+
+		# @comment = @article.comments.create(comments_params)
 
 		if @article.save
 			redirect_to @article

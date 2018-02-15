@@ -1,4 +1,3 @@
 <h1><%= @period.title %></h1>
 
-<%= link_to 'New article', new_article_path %>
-<!--<%= button_to "New", new_article_path %> why is not recognizing the post method? -->
+<%= link_to 'New article', new_article_path(period_id: @period)%>
