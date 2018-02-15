@@ -10,9 +10,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def new
-		@article = Article.new
-		# http://localhost:3000/articles/new?period_id=1
-	
+		@article = Article.new	
 		@article.period = Period.find(params[:period_id])
 	end
 
@@ -21,11 +19,8 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		# @article = Article.new(article_params)
-		@period = Period.find(@article.period)
-		@article = period.articles.create(article_params)
-
-		# @comment = @article.comments.create(comments_params)
+		@period = Period.find(article_params[:period_id])
+		@article = @period.articles.create(article_params)
 
 		if @article.save
 			redirect_to @article
@@ -53,6 +48,6 @@ class ArticlesController < ApplicationController
 
 	private 
 	def article_params
-		params.require(:article).permit(:title, :text)
+		params.require(:article).permit(:title, :text, :period_id)
 	end
 end
