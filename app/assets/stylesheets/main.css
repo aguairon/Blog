@@ -1,10 +1,11 @@
 
-.site-header img {
-	display: block;
-	width: auto;
-	height: auto;
+.site-header {
+	img {
+		display: block;
+		width: auto;
+		height: auto;
+	}
+	h1 {
+		color: red;
+	}
 }
-.site-header h1 {
-	color: red;
-}
-
