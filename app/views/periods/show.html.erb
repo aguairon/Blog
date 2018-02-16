@@ -1,0 +1,4 @@
+<h1><%= @period.title %></h1>
+
+<%= render :partial => "aplication/article", :collection => @period.articles %>
+<%= link_to 'New article', new_article_path(period_id: @period)%>

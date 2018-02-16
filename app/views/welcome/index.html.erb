@@ -1,4 +1,8 @@
 <h1>Historias interesantes</h1>
 <h2>Periodos historicos</h2>
 
-<h2><%= link_to 'Articles', controller: 'articles'%></h2>
+<%= link_to 'New Period', new_period_path %>
+
+<% @periods.each do |period| %>
+		<div><%= link_to period.title, period_path(period) %></div>
+<% end %>
