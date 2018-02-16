@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog Begona</title>
+    <title>Historias Interesantes</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,9 @@
   </head>
 
   <body>
+  	<header class='site-header'>
+  		<%= link_to image_tag("https://contentmapas.didactalia.net/imagenes/Usuarios/ImagenesCKEditor/5d1dada8-e23b-499e-aa70-66ad03aedbc4/0d634b00-59a1-4e68-8da3-12e635d0b4a6.jpg", alt: "Historias"), root_path %>
+  	</header>
     <%= yield %>
   </body>
 </html>

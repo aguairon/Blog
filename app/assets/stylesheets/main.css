@@ -1,0 +1,11 @@
+
+.site-header {
+	img {
+		display: block;
+		width: auto;
+		height: auto;
+	}
+	h1 {
+		color: red;
+	}
+}
