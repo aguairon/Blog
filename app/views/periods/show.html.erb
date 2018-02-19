@@ -1,4 +1,8 @@
-<h1><%= @period.title %></h1>
+<header class="article_header">
+	<h1><%= @period.title %></h1>
+	<%= link_to "Edit", edit_period_path(@period)%>
+</header>
+
 <div id="periods_list">
 	<%= render :partial => "aplication/article", :collection => @period.articles %>
 </div>
