@@ -1,9 +1,21 @@
 <h1><%= @period.title %></h1>
-<div id="periods_list">
-	<%= render :partial => "aplication/article", :collection => @period.articles %>
-</div>
-<div id="new_article">
-	<%= link_to 'New article', new_article_path(period_id: @period)%>
+<div class="seccion_articulos">
+	<h2>Articulos</h2>
+	<div id="periods_list">
+		<%= render :partial => "aplication/article", :collection => @period.articles %>
+	</div>
+	<div id="new_article">
+		<%= link_to 'New article', new_article_path(period_id: @period)%>
+	</div>
 </div>
 
+<div class="seccion_galeria">
+	<h2>Galeria</h2>
+</div>
+<div class="seccion_videoteca">
+	<h2>Videoteca</h2>
+</div>
+<div class="seccion_bibliografia">
+	<h2>Bibliografia</h2>
+</div>
 
