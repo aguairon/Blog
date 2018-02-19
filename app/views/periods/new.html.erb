@@ -1,7 +1,11 @@
-<h2>New Historic Period</h2>
+<header>
+	<h2>New Historic Period</h2>
+</header>
 
-<%= form_with(model: @period) do |form| %>
-	<div><%=form.label :title %>
-	<%= form.text_field :title %>
-	<%= form.submit %></div>
-<% end %>
+<div class="new_period_form">
+	<%= form_with(model: @period) do |form| %>
+		<div><%=form.label :title %>
+		<%= form.text_field :title %>
+		<%= form.submit %></div>
+	<% end %>
+</div>
