@@ -1,11 +1,16 @@
 
 .site-header {
-	img {
-		display: block;
-		width: 20%;
-		height: 20%;
-	}
-	h1 {
-		color: red;
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/ad/2motiyb.jpg");
+	display: block;
+	height: 50%;
+
+	h1 a{
+      color: #FFF;
 	}
 }
+	h1, h2, #articles_list a, .periods_list a {
+		font-family: Roboto Slab,Helvetica,Arial,sans-serif;
+		color: #384A5F;
+		text-align: center;
+	}
+
