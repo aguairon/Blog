@@ -1,11 +1,17 @@
 
 .site-header {
 	background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/ad/2motiyb.jpg");
+	background-repeat: no-repeat;
 	display: block;
-	height: 50%;
+	height: 650px;
+	width: 500px;
+	
 
-	h1 a{
-      color: #FFF;
+	h1 a {
+		position: relative;
+		top: 5rem;
+      	color: #FFF;
+      	text-align: center;
 	}
 }
 	h1, h2, #articles_list a, .periods_list a {
