@@ -1,4 +1,8 @@
 
+* {
+  box-sizing: border-box;
+}
+
 .site-header {
 	background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/ad/2motiyb.jpg");
 	background-repeat: no-repeat;
@@ -14,8 +18,15 @@
       	text-align: center;
 	}
 }
-	h1, h2, #articles_list a, .periods_list a {
-		font-family: Roboto Slab,Helvetica,Arial,sans-serif;
-		color: #384A5F;
-		text-align: center;
-	}
+
+h1, h2, #articles_list a, .periods_list a {
+	font-family: Roboto Slab,Helvetica,Arial,sans-serif;
+	color: #384A5F;
+	text-align: center;
+}
+
+.content{
+	margin: 50px;
+}
+
+
