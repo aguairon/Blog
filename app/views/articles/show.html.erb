@@ -4,11 +4,13 @@
 
 
 <div class="article">
-	<%= @article.text %><br><br>
-	<%= link_to 'Back', articles_path %>
-	<%= link_to 'Edit', edit_article_path(@article) %></br>
-
+	<p><%= @article.text %><br><br></p>
+	<div class="links">
+		<%= link_to 'Back', articles_path %>
+		<%= link_to 'Edit', edit_article_path(@article) %></br>
+	</div>
 </div>
+
 <div class="comments">
 	<h2>Comments</h2>
 	<%= render @article.comments%>
