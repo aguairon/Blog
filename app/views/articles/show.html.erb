@@ -1,13 +1,9 @@
 <header>
-	<h1><%= @article.title %></h1>
+	<h1><%= @article.title %><span class="edit-link"><%= link_to 'Edit', edit_article_path(@article) %></span></h1>
 </header>
 
 <div class="article">
 	<p><%= @article.text %></p>
-	<div class="links">
-		<%= link_to 'Back', request.referrer %>
-		<%= link_to 'Edit', edit_article_path(@article) %></br>
-	</div>
 </div>
 
 <div class="comments">
