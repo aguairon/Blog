@@ -23,6 +23,11 @@ body {
 	text-align: center;
 }
 
+.period_header a, .article-header a {
+	font-size: 14px;
+	padding-left: 20px;
+}
+
 h1, h2, #articles_list a, .periods_list a {
 	font-family: Roboto Slab,Helvetica,Arial,sans-serif;
 	color: #384A5F;
