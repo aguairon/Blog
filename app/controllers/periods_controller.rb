@@ -10,6 +10,10 @@ class PeriodsController < ApplicationController
  	def new
  		@period = Period.new
  	end
+	 
+	def edit
+		@period = Period.find(params[:id])
+	end
 
  	def create
  		@period = Period.new(period_params)
@@ -20,6 +24,16 @@ class PeriodsController < ApplicationController
 			render 'new'
 		end
  	end
+
+ 	def update
+	    @period = Period.find(params[:id])
+	 
+	    if @period.update(period_params)
+	      redirect_to @period
+	    else
+	      render 'edit'
+	    end
+  	end
 
  	private 
 	def period_params

@@ -1,3 +1,15 @@
 // Place all the styles related to the Periods controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.periods_list {
+	margin-bottom: 30px
+}
+
+.periods_list div{
+	padding: 5px;
+}
+
+.new_period a {
+	border: solid #384A5F;
+	padding: 10px;
+}
