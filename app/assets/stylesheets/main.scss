@@ -12,8 +12,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center top;
 	display: block;
-	height: 670px;
-	width: 400px;
+	width: 350px;
 	position: fixed;
 	bottom: 0px;
 	top: 0px
@@ -23,20 +22,42 @@ body {
 	text-align: center;
 }
 
+.site-header h1 a {
+	color: white;
+	font-weight: 500;
+}
+
+.site-header h1 a:hover {
+	color: Gray;
+}
+
 .period_header a, .article-header a {
 	font-size: 14px;
 	padding-left: 10px;
 }
 
 h1, h2, #articles_list a, .periods_list a {
-	font-family: Roboto Slab,Helvetica,Arial,sans-serif;
-	color: #384A5F;
+	// font-family: Roboto Slab,Helvetica,Arial,sans-serif;
+	font-family: 'Lobster', cursive;
+}
+
+#articles_list a, .periods_list a {
+	font-size: 22px;
 }
 
 .content {
 	padding: 0 80px;
 	position: absolute;
-	left: 400px;
+	left: 350px;
+}
+
+a {
+	color: #384A5F;
+	text-decoration: none;
+}
+
+a:hover {
+	color: Gray;
 }
 
 
