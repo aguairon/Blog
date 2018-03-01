@@ -37,8 +37,12 @@ body {
 }
 
 h1, h2, #articles_list a, .periods_list a {
-	// font-family: Roboto Slab,Helvetica,Arial,sans-serif;
 	font-family: 'Lobster', cursive;
+}
+
+h2 {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 #articles_list a, .periods_list a {
