@@ -1,15 +1,27 @@
 class CharactersController < ApplicationController
 	def index
-		@characters = Character.All
+		@period = Period.find(params[:period_id])
+ 		@characters = @period.characters
 	end
 
 	def show
-    	@article = Article.find(params[:id])
+    	@character = Character.find(params[:id])
   	end
 
 	def new
 		@character = Character.new	
 		@character.period = Period.find(params[:period_id])
+	end
+
+	def create
+		@period = Period.find(character_params[:period_id])
+		@character = @period.character.create(character_params)
+
+		if @article.save
+			redirect_to @article
+		else
+			render 'new'
+		end
 	end
 
 	private 
