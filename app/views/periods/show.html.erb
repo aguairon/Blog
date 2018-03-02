@@ -1,29 +1,25 @@
-<header class="period_header">
+<header class="period-header">
 	<h1><%= @period.title %><a class="edit-link"><%= link_to "Edit", edit_period_path(@period)%></a></h1>
 </header>
 
 <div class="seccions">
-	<div class="seccion_articulos">
+	<div class="seccion seccion_articulos">
 		<h2>Articulos</h2>
 		<div id="articles_list">
 			<%= render :partial => "aplication/article", :collection => @articles %>
 		</div>
-
-<!-- 		<div id="new_article">
-			<%= link_to 'New article', new_article_path(period_id: @period)%>
-		</div> -->
-		<div><%= link_to "More articles", articles_path(period_id: @period) %></div>
+		<div class="more-articules"><%= link_to "More articles", articles_path(period_id: @period) %></div>
 	</div>
 
-	<div class="seccion_personajes">
+	<div class="seccion seccion_personajes">
 		<h2>Personajes</h2>
 	</div>
 
-	<div class="seccion_galeria">
+	<div class="seccion seccion_galeria">
 		<h2>Galeria</h2>
 	</div>
 
-	<div class="seccion_bibliografia">
+	<div class="seccion seccion_bibliografia">
 		<h2>Bibliografia</h2>
 	</div>
 </div>
