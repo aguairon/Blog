@@ -14,19 +14,11 @@
   <% end %>
 
   <%= form.hidden_field :period_id, :value => @article.period_id%>
- 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
- 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
+
+  <label for="title">Título</label>
+  <%= form.text_field :title %>
+  <label for="text">Texto del artículo</label>
+  <%= form.text_area :text %>
+  <%= form.submit %>
  
 <% end %>
