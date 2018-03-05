@@ -13,7 +13,14 @@
 
   <body>
   	<header class='site-header'>
-      <h1><%= link_to "Begona Fernandez", root_path%></h1>
+      <h1><%= link_to "Begona Fernandez", root_path%>
+        <% if admin_signed_in? %>
+          <a><%= link_to('.', destroy_admin_session_path, method: :delete) %></a>
+        <% else %>
+          <a><%= link_to ".", new_admin_session_path %></a> 
+        <% end %>
+        <!-- password: prueba -->
+      </h1>
   	</header>
     <div class ='content'>
       <%= yield %>
