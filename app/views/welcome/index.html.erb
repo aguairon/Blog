@@ -1,5 +1,9 @@
 <header class="period-header">
-	<h1 class="main">Periodos historicos<a><%= link_to 'New Period', new_period_path %></a></h1>
+	<h1 class="main">Periodos historicos<% if admin_signed_in? %>
+		<a><%= link_to 'New Period', new_period_path %></a>
+		<%= link_to "Log out", destroy_admin_session_path, method: :delete %>
+		<% end %>
+	</h1>
 </header>
 
 <div class="periods_list">
@@ -7,3 +11,6 @@
 			<div><%= link_to period.title, period_path(period) %></div>
 	<% end %>
 </div>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
