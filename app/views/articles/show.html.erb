@@ -1,5 +1,9 @@
 <header class="article-header">
-	<h1><%= @article.title %><a class="edit-link"><%= link_to 'Edit', edit_article_path(@article) %></a></h1>
+	<h1><%= @article.title %>
+		<% if admin_signed_in? %>
+			<a class="edit-link"><%= link_to 'Edit', edit_article_path(@article) %></a>
+		<% end %>
+	</h1>
 </header>
 
 <div class="article">

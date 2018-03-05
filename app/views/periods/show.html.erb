@@ -1,5 +1,9 @@
 <header class="period-header">
-	<h1><%= @period.title %><a class="edit-link"><%= link_to "Edit", edit_period_path(@period)%></a></h1>
+	<h1><%= @period.title %>
+		<% if admin_signed_in? %>
+			<a class="edit-link"><%= link_to "Edit", edit_period_path(@period)%></a>
+		<% end %>
+	</h1>
 </header>
 
 <div class="seccions">
