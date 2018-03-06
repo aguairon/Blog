@@ -1,12 +1,12 @@
-<header class="period-header">
+<header class="header period-header">
 	<h1 class="main">Periodos historicos
 		<% if admin_signed_in? %>
-			<a><%= link_to 'New Period', new_period_path %></a>
+			<a><%= link_to 'Nuevo periodo', new_period_path %></a>
 		<% end %>
 	</h1>
 </header>
 
-<div class="periods_list">
+<div class="list periods_list">
 	<% @periods.each do |period| %>
 		<div><%= link_to period.title, period_path(period) %></div>
 	<% end %>

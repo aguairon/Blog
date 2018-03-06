@@ -18,10 +18,18 @@
 	grid-row-gap: 10px;
 	width: 500px;
 	padding: 10px;
-
 }
 
 .seccion {
 	padding-bottom: 20px;
 	border-bottom: 1px solid #DCDCDC;
+}
+
+.seccion div {
+	padding: 5px;
+	text-transform: capitalize;
+}
+
+.more {
+	text-align: right
 }

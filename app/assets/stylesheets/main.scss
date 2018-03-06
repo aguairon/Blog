@@ -31,23 +31,35 @@ body {
 	color: Gray;
 }
 
-.period-header a, .article-header a, .more-articules a {
+.header a, .more a {
 	font-size: 16px;
 	padding-left: 10px;
 	font-family: 'Oswald', sans-serif;
 }
 
-h1, h2, #articles_list a, .periods_list a {
+h1, h2 {
 	font-family: 'Lobster', cursive;
 }
 
 h2 {
 	margin-top: 0px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
+}
+.list div {
+	padding: 5px;
 }
 
-#articles_list a, .periods_list a {
+.list a {
+	font-family: 'Lobster', cursive;
 	font-size: 22px;
+	text-transform: capitalize;
+}
+
+.empty {
+	text-align: center;
+	color: Gray;
+	font-family: 'Oswald', sans-serif;
+
 }
 
 .content {

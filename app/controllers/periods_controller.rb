@@ -6,6 +6,7 @@ class PeriodsController < ApplicationController
  	def show
  		@period = Period.find(params[:id])
  		@articles = @period.articles.limit(5)
+ 		@characters = @period.characters.limit(2)
  	end
 
  	def new
