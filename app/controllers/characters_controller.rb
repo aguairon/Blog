@@ -15,10 +15,10 @@ class CharactersController < ApplicationController
 
 	def create
 		@period = Period.find(character_params[:period_id])
-		@character = @period.character.create(character_params)
+		@character = @period.characters.create(character_params)
 
-		if @article.save
-			redirect_to @article
+		if @character.save
+			redirect_to @character
 		else
 			render 'new'
 		end
@@ -26,6 +26,6 @@ class CharactersController < ApplicationController
 
 	private 
 	def character_params
-		params.require(:character).permit(:name, :text, :period_id)
+		p params.require(:character).permit(:name, :body, :period_id)
 	end
 end
