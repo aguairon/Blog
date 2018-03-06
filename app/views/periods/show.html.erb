@@ -14,7 +14,7 @@
 	<div class="seccion seccion_personajes">
 		<h2>Personajes</h2>
 		<div id="characters-list">
-			<% @period.characters.each do |c|%>
+			<% @characters.each do |c|%>
 				<div><%= link_to c.name, character_path(c) %></div>
 			<% end %>
 		</div>
