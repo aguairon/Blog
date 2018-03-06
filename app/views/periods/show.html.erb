@@ -5,7 +5,7 @@
 <div class="seccions">
 	<div class="seccion seccion_articulos">
 		<h2>Articulos</h2>
-		<div id="articles_list">
+		<div class="list articles_list">
 			<%= render :partial => "aplication/article", :collection => @articles %>
 		</div>
 		<div class="more more-articules"><%= link_to "Mas artículos", articles_path(period_id: @period) %></div>
@@ -13,13 +13,10 @@
 
 	<div class="seccion seccion_personajes">
 		<h2>Personajes</h2>
-		<div id="characters-list">
-			<% @characters.each do |c|%>
-				<div><%= link_to c.name, character_path(c) %></div>
-			<% end %>
+		<div class="list characters-list">
+			<%= render :partial => "aplication/character", :collection => @characters %>
 		</div>
 		<div class="more more-characters"><%= link_to "Mas personajes", characters_path(period_id: @period) %></div>
-		<%= link_to "new characters", new_character_path(period_id: @period) %>
 	</div>
 
 	<div class="seccion seccion_galeria">
