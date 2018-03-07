@@ -5,6 +5,7 @@
 
 body {
 	margin: 0px;
+	position: relative;
 }
 
 .site-header {
@@ -33,7 +34,6 @@ body {
 }
 
 .content {
-	width: 70%;
 	min-width: 300px;
 	padding: 0 5%;
 	position: absolute;
