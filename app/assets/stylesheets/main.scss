@@ -12,7 +12,8 @@ body {
 	background-repeat: no-repeat;
 	background-position: center top;
 	display: block;
-	width: 350px;
+	width: 28%;
+	height: 100%;
 	position: fixed;
 	bottom: 0px;
 	top: 0px
@@ -31,6 +32,13 @@ body {
 	color: Gray;
 }
 
+.content {
+	width: 70%;
+	padding: 0 80px;
+	position: absolute;
+	left: 28%;
+}
+
 .header a, .more a {
 	font-size: 16px;
 	padding-left: 10px;
@@ -45,6 +53,7 @@ h2 {
 	margin-top: 0px;
 	margin-bottom: 5px;
 }
+
 .list div {
 	padding: 5px;
 }
@@ -59,13 +68,6 @@ h2 {
 	text-align: center;
 	color: Gray;
 	font-family: 'Oswald', sans-serif;
-
-}
-
-.content {
-	padding: 0 80px;
-	position: absolute;
-	left: 350px;
 }
 
 a {
