@@ -6,12 +6,14 @@
 body {
 	margin: 0px;
 	position: relative;
+	min-width: 650px;
 }
 
 .site-header {
 	background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/ad/2motiyb.jpg");
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-size: cover;
 	display: block;
 	width: 28%;
 	min-width: 200px;
@@ -34,8 +36,8 @@ body {
 }
 
 .content {
-	min-width: 300px;
-	padding: 0 5%;
+	width: 60%;
+	margin: 0 4%;
 	position: absolute;
 	left: 28%;
 }
@@ -113,7 +115,6 @@ input[type=submit] {
 	font-size: 14px;
 
 }
-
 
 input[type=submit]:hover {
 	background-color: #293746;
