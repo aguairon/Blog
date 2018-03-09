@@ -1,22 +1,22 @@
 <header>
-    <h1>Nuevo Personaje</h1>
+  <h1>Nuevo Personaje</h1>
 </header>
 
 <%= form_with(model: @character) do |form| %>
   <%= form.hidden_field :period_id, :value => @character.period_id%>
  
   <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
+  <%= form.label :name %><br>
+  <%= form.text_field :name %>
   </p>
  
   <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
+  <%= form.label :body %><br>
+  <%= form.text_area :body %>
   </p>
  
   <p>
-    <%= form.submit %>
+  <%= form.submit %>
   </p>
  
 <% end %>

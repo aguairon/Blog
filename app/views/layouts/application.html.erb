@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog de Begona Fernandez</title>
-    <%= csrf_meta_tags %>
+  <title>Blog de Begona Fernandez</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   </head>
 
   <body>
-  	<header class='site-header'>
-      <h1><%= link_to "Begona Fernandez", root_path%>
-        <% if admin_signed_in? %>
-          <a><%= link_to('.', destroy_admin_session_path, method: :delete) %></a>
-        <% else %>
-          <a><%= link_to ".", new_admin_session_path %></a> 
-        <% end %>
-      </h1>
-  	</header>
-    <div class ='content'>
-      <%= yield %>
-    </div>
+    <header class='site-header'>
+    <h1><%= link_to "Begona Fernandez", root_path%>
+    <% if admin_signed_in? %>
+      <a><%= link_to('.', destroy_admin_session_path, method: :delete) %></a>
+    <% else %>
+      <a><%= link_to ".", new_admin_session_path %></a> 
+    <% end %>
+    </h1>
+    </header>
+  <div class ='content'>
+    <%= yield %>
+  </div>
   </body>
 </html>

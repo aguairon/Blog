@@ -1,15 +1,15 @@
 <header>
-	<h2>New Historic Period</h2>
+  <h2>New Historic Period</h2>
 </header>
 
 <div class="new_period_form">
-	<% if admin_signed_in? %>
-		<%= form_with(model: @period) do |form| %>
-			<div><%=form.label :title %>
-			<%= form.text_field :title %>
-			<%= form.submit %></div>
-		<% end %>
-	<% else %>
-	  <a><%= link_to "Log in", new_admin_session_path %></a> 
-	<% end %> 
+  <% if admin_signed_in? %>
+    <%= form_with(model: @period) do |form| %>
+      <div><%=form.label :title %>
+      <%= form.text_field :title %>
+      <%= form.submit %></div>
+    <% end %>
+  <% else %>
+    <a><%= link_to "Log in", new_admin_session_path %></a> 
+  <% end %> 
 </div>

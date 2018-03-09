@@ -28,13 +28,13 @@ class PeriodsController < ApplicationController
  	end
 
  	def update
-	    @period = Period.find(params[:id])
+	  @period = Period.find(params[:id])
 	 
-	    if @period.update(period_params)
-	      redirect_to @period
-	    else
-	      render 'edit'
-	    end
+	  if @period.update(period_params)
+	    redirect_to @period
+	  else
+	    render 'edit'
+	  end
   	end
 
  	private 

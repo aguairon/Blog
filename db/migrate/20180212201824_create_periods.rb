@@ -1,9 +1,9 @@
 class CreatePeriods < ActiveRecord::Migration[5.1]
   def change
-    create_table :periods do |t|
-      t.string :title
+  create_table :periods do |t|
+    t.string :title
 
-      t.timestamps
-    end
+    t.timestamps
+  end
   end
 end

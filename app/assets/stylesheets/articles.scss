@@ -3,20 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #new_article a {
-	border-bottom: 1px solid #384A5F;
-	padding: 5px;
-	margin-top: 10px;
+  border-bottom: 1px solid #384A5F;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 #new_article a:hover {
-	color: Gray;
+  color: Gray;
 }
 
 .article p {
-	max-width: 1300px;
-	font-size: 18px;
-	text-align: justify;
-	white-space: pre-wrap;
-	line-height: 1.4;
-	font-family: 'Raleway', sans-serif;
+  max-width: 1300px;
+  font-size: 18px;
+  text-align: justify;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  font-family: 'Raleway', sans-serif;
 }

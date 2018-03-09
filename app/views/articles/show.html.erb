@@ -1,19 +1,19 @@
 <header class="header article-header">
-	<h1><%= @article.title %>
-		<% if admin_signed_in? %>
-			<a class="edit-link"><%= link_to 'Edit', edit_article_path(@article) %></a>
-		<% end %>
-	</h1>
+  <h1><%= @article.title %>
+    <% if admin_signed_in? %>
+      <a class="edit-link"><%= link_to 'Edit', edit_article_path(@article) %></a>
+    <% end %>
+  </h1>
 </header>
 
 <div class="article">
-	<p><%= @article.text %></p>
+  <p><%= @article.text %></p>
 </div>
 
 <div class="comments">
-	<h2>Comments</h2>
-	<%= render @article.comments%>
+  <h2>Comments</h2>
+  <%= render @article.comments%>
 
-	<h3>Add a comment:</h3>
-	<%= render 'comments/form' %>
+  <h3>Add a comment:</h3>
+  <%= render 'comments/form' %>
 </div>
