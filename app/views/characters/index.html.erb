@@ -1,5 +1,5 @@
 <header class="header character-header">
-  <h1>Personajes relacionados con <%= @period.title %><a class="character-header-link"><%= link_to "Nuevo personaje", new_character_path(period_id: @period) %></a></h1>
+  <h1>Personajes relacionados con <%= @period.title %><%= link_to "Nuevo personaje", new_character_path(period_id: @period) %></h1>
 </header>
 <div class="list character_list">
   <%= render :partial => "aplication/character", :collection => @characters %>
