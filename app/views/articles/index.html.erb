@@ -2,7 +2,7 @@
 <header class="header article-header">
   <h1>Articulos sobre <%= @period.title %>
     <% if admin_signed_in? %>
-      <a class="period-header-link"><%= link_to 'New article', new_article_path(period_id: @period) %></a>
+      <%= link_to 'New article', new_article_path(period_id: @period), class:"text-muted" %>
     <% end %>
   </h1>
 </header>

@@ -1,7 +1,7 @@
 <header class="header period-header">
   <h1 class="main">Periodos historicos
     <% if admin_signed_in? %>
-      <a><%= link_to 'Nuevo periodo', new_period_path %></a>
+      <%= link_to 'Nuevo periodo', new_period_path, class:"text-muted" %>
     <% end %>
   </h1>
 </header>

@@ -27,16 +27,15 @@ body {
 }
 
 .site-header h1 a {
-  color: white;
+  color: white !important;
   font-weight: 500;
 }
 
 .site-header h1 a:hover {
-  color: Gray;
+  color: Gray !important;
 }
 
 .content {
-  width: 60%;
   margin: 0 4%;
   position: absolute;
   left: 28%;
@@ -45,11 +44,11 @@ body {
 .header a, .more a {
   font-size: 16px;
   padding-left: 10px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif !important;
 }
 
 h1, h2 {
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster', cursive !important;
 }
 
 h2 {
@@ -62,7 +61,7 @@ h2 {
 }
 
 .list a {
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster', cursive !important;
   font-size: 22px;
   text-transform: capitalize;
 }
@@ -70,21 +69,21 @@ h2 {
 .empty {
   text-align: center;
   color: Gray;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif !important;
 }
 
 a {
-  color: #384A5F;
-  text-decoration: none;
+  color: #384A5F !important;
+  text-decoration: none !important;
 }
 
 a:hover {
-  color: Gray;
+  color: Gray !important;
 }
 
 // form styling
 label {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif !important;
 }
 input[type=text] {
   width: 100%;
@@ -92,7 +91,7 @@ input[type=text] {
   margin: 8px 0;
   border: 1px solid #384A5F;
   font-size: 14px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif !important;
 }
 
 textarea {
@@ -103,7 +102,7 @@ textarea {
   resize: none;
   border: 1px solid #384A5F;
   font-size: 14px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif !important;
 }
 
 input[type=submit] {
