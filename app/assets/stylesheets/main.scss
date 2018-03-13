@@ -27,12 +27,12 @@ body {
 }
 
 .site-header h1 a {
-  color: white !important;
+  color: white;
   font-weight: 500;
 }
 
 .site-header h1 a:hover {
-  color: Gray !important;
+  color: Gray;
 }
 
 .content {
@@ -44,11 +44,11 @@ body {
 .header a, .more a {
   font-size: 16px;
   padding-left: 10px;
-  font-family: 'Oswald', sans-serif !important;
+  font-family: 'Oswald', sans-serif;
 }
 
 h1, h2 {
-  font-family: 'Lobster', cursive !important;
+  font-family: 'Lobster', cursive;
 }
 
 h2 {
@@ -61,7 +61,7 @@ h2 {
 }
 
 .list a {
-  font-family: 'Lobster', cursive !important;
+  font-family: 'Lobster', cursive ;
   font-size: 22px;
   text-transform: capitalize;
 }
@@ -69,29 +69,30 @@ h2 {
 .empty {
   text-align: center;
   color: Gray;
-  font-family: 'Oswald', sans-serif !important;
+  font-family: 'Oswald', sans-serif;
 }
 
 a {
-  color: #384A5F !important;
-  text-decoration: none !important;
+  color: #384A5F;
+  text-decoration: none;
 }
 
 a:hover {
-  color: Gray !important;
+  color: Gray;
 }
 
 // form styling
 label {
-  font-family: 'Oswald', sans-serif !important;
+  font-family: 'Oswald', sans-serif;
 }
+
 input[type=text] {
   width: 100%;
   padding: 10px 20px;
   margin: 8px 0;
   border: 1px solid #384A5F;
   font-size: 14px;
-  font-family: 'Raleway', sans-serif !important;
+  font-family: 'Raleway', sans-serif;
 }
 
 textarea {
@@ -102,7 +103,7 @@ textarea {
   resize: none;
   border: 1px solid #384A5F;
   font-size: 14px;
-  font-family: 'Raleway', sans-serif !important;
+  font-family: 'Raleway', sans-serif;
 }
 
 input[type=submit] {
