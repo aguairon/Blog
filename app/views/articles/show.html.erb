@@ -1,7 +1,11 @@
 <header class="header article-header">
   <h1><%= @article.title %>
     <% if admin_signed_in? %>
+<<<<<<< HEAD
       <%= link_to 'Edit', edit_article_path(@article), class:"text-muted" %>
+=======
+      <%= link_to 'Edit', edit_article_path(@article) %>
+>>>>>>> master
     <% end %>
   </h1>
 </header>
