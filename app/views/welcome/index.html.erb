@@ -2,6 +2,10 @@
   <h1 class="main">Periodos historicos
     <% if admin_signed_in? %>
       <%= link_to 'Nuevo periodo', new_period_path, class:"text-muted" %>
+        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+        	<i class="glyphicon glyphicon-align-left"></i>
+        Toggle Sidebar
+    	</button>
     <% end %>
   </h1>
 </header>

@@ -35,6 +35,10 @@ body {
   color: Gray;
 }
 
+.site-header.active {
+    margin-left: -270px;
+}
+
 .content {
   margin: 0 4%;
   position: absolute;
@@ -119,6 +123,5 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #293746;
 }
-
 
 

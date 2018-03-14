@@ -13,14 +13,14 @@
   </head>
 
   <body>
-    <header class='site-header'>
-    <h1><%= link_to "Begona Fernandez", root_path%>
-    <% if admin_signed_in? %>
-      <%= link_to('.', destroy_admin_session_path, method: :delete) %>
-    <% else %>
-      <%= link_to ".", new_admin_session_path %>
-    <% end %>
-    </h1>
+    <header class='site-header collapse'>
+      <h1><%= link_to "Begona Fernandez", root_path%>
+      <% if admin_signed_in? %>
+        <%= link_to('.', destroy_admin_session_path, method: :delete) %>
+      <% else %>
+        <%= link_to ".", new_admin_session_path %>
+      <% end %>
+      </h1>
     </header>
     <div class ='content'>
       <%= yield %>
