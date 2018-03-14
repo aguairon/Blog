@@ -124,4 +124,23 @@ input[type=submit]:hover {
   background-color: #293746;
 }
 
+/*-------------------------------------------
+MEDIAQUERIES
+-------------------------------------------*/
+@media (max-width: 768px) {
+  .site-header {
+    margin-left: -270px;
+  }
+  .site-header.active {
+    margin-left: 0;
+  }
+  .content {
+    margin-left: -100px;
+  }
+
+  .content.active {
+    margin-left: 4%;
+  }
+}
+
 
