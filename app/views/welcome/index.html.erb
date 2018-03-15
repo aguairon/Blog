@@ -1,11 +1,10 @@
 <header class="header period-header">
+  <div id="sidebarCollapse" class="btn btn-info navbar-btn">
+    <i class="fa fa-bars"></i>
+  </div>
   <h1 class="main">Periodos historicos
     <% if admin_signed_in? %>
       <%= link_to 'Nuevo periodo', new_period_path, class:"text-muted" %>
-        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-        	<i class="glyphicon glyphicon-align-left"></i>
-        Toggle Sidebar
-    	</button>
     <% end %>
   </h1>
 </header>
@@ -18,3 +17,6 @@
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+<div> jeses
+  <span class="glyphicon glyphicons-podcast"></span>
+</div>
