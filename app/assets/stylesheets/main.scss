@@ -154,4 +154,10 @@ MEDIAQUERIES
   }
 }
 
+@media (min-width: 768px) {
+  #sidebarCollapse {
+    display: none;
+  }
+}
+
 
