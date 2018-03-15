@@ -39,6 +39,10 @@ body {
     margin-left: -270px;
 }
 
+/*-------------------------------------------
+Content styling
+-------------------------------------------*/
+
 .content {
   margin: 0 4%;
   position: absolute;
@@ -85,7 +89,14 @@ a:hover {
   color: Gray;
 }
 
-// form styling
+#sidebarCollapse {
+  font-size: 28px;
+  color: Gray;
+}
+
+/*-------------------------------------------
+Form styling
+-------------------------------------------*/
 label {
   font-family: 'Oswald', sans-serif;
 }
