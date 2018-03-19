@@ -37,12 +37,12 @@
       $(document).ready(function () {
 
         $('#siteHeaderCollapse').on('click', function () {
-          $('.site-header, .content').addClass('active');
+          $('.site-header').addClass('active');
           $('.overlay').fadeIn();
         });
 
         $('.overlay').on('click', function () {
-          $('.site-header, .content').removeClass('active');
+          $('.site-header').removeClass('active');
           $('.overlay').fadeOut();
         })
       });

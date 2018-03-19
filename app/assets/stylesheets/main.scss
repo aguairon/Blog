@@ -50,8 +50,8 @@ body {
 }
 
 .overlay {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: none;
   background: rgba(0, 0, 0, 0.50);
   position: fixed;
@@ -163,10 +163,6 @@ MEDIAQUERIES
   }
   .content {
     margin-left: -100px;
-  }
-
-  .content.active {
-    margin-left: 4%;
   }
 }
 
