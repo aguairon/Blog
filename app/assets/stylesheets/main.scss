@@ -86,7 +86,7 @@ a:hover {
 label {
   font-family: 'Oswald', sans-serif;
 }
-input[type=text] {
+input {
   width: 100%;
   padding: 10px 20px;
   margin: 8px 0;
@@ -118,6 +118,10 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #293746;
+}
+
+.field #admin_remember_me{
+  right: 100px;
 }
 
 
