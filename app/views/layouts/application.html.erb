@@ -21,8 +21,21 @@
       <% end %>
       </h1>
     </header>
+
     <div class ='content'>
+      <div id="sidebarCollapse" class="btn btn-info navbar-btn">
+        <i class="fa fa-bars"></i>
+      </div>
+
       <%= yield %>
     </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+        $('#sidebarCollapse').on('click', function () {
+          $('.site-header, .content').toggleClass('active');
+      });
+    });
+    </script>
   </body>
 </html>
