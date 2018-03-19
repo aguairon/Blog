@@ -23,19 +23,29 @@
     </header>
 
     <div class ='content'>
-      <div id="sidebarCollapse" class="btn btn-info navbar-btn">
+      <div id="siteHeaderCollapse" class="btn btn-info navbar-btn">
         <i class="fa fa-bars"></i>
       </div>
 
       <%= yield %>
     </div>
+
+    <div class="overlay">
+    <div>
+
     <script type="text/javascript">
       $(document).ready(function () {
 
-        $('#sidebarCollapse').on('click', function () {
-          $('.site-header, .content').toggleClass('active');
+        $('#siteHeaderCollapse').on('click', function () {
+          $('.site-header, .content').addClass('active');
+          $('.overlay').fadeIn();
+        });
+
+        $('.overlay').on('click', function () {
+          $('.site-header, .content').removeClass('active');
+          $('.overlay').fadeOut();
+        })
       });
-    });
     </script>
   </body>
 </html>
