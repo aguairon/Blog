@@ -6,13 +6,13 @@
   <%= form.hidden_field :period_id, :value => @character.period_id%>
  
   <p>
-  <%= form.label 'Nombre' %><br>
-  <%= form.text_field :name %>
+  <%= form.label :name ,'Nombre' %><br>
+  <%= form.text_field :name, required: true, autofocus: true, minlength: 5 %>
   </p>
  
   <p>
-  <%= form.label 'Artículo' %><br>
-  <%= form.text_area :body %>
+  <%= form.label :body, 'Artículo' %><br>
+  <%= form.text_area :body, required: true, autofocus: true, minlength: 5 %>
   </p>
  
   <p>

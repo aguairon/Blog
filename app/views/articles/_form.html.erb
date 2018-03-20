@@ -15,10 +15,10 @@
 
   <%= form.hidden_field :period_id, :value => @article.period_id%>
 
-  <div><%=form.label 'Título' %>
-  <%= form.text_field :title %>
-  <%=form.label 'Cuerpo del artículo' %>
-  <%= form.text_area :text %>
+  <div><%=form.label :title, 'Título' %>
+  <%= form.text_field :title, required: true, autofocus: true, minlength: 5%>
+  <%=form.label :text, 'Cuerpo del artículo' %>
+  <%= form.text_area :text, required: true, autofocus: true, minlength: 5 %>
   <%= form.submit 'Guardar artículo' %>
  
 <% end %>
