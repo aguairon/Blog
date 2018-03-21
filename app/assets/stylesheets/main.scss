@@ -82,10 +82,14 @@ a:hover {
   color: Gray;
 }
 
-// form styling
+/*---------------------------------------
+form styling
+---------------------------------------*/
+
 label {
   font-family: 'Oswald', sans-serif;
 }
+
 input {
   width: 100%;
   padding: 10px 20px;
@@ -93,6 +97,9 @@ input {
   border: 1px solid #384A5F;
   font-size: 14px;
   font-family: 'Raleway', sans-serif;
+  &:invalid:not(:focus) {
+    background-color: #d3d3d3;
+  }
 }
 
 textarea {
