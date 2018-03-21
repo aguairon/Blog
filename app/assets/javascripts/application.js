@@ -13,14 +13,6 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= require rails-ujs
+// require rails-ujs
 //= require turbolinks
 //= require_tree .
-
-// $(document).ready(function () {
-
-//     $('#sidebarCollapse').on('click', function () {
-//         $('.site-header, .content').toggleClass('active');
-//     });
-
-// });

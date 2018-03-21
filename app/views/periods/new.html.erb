@@ -7,8 +7,9 @@
     <%= form_with(model: @period) do |form| %>
       <% if @period.errors.any? %>
         <div id="error_explanation">
-        <div class="alert alert-danger">The form contains <%= pluralize(@period.errors.details.count, "error") %>.
-        </div>  
+          <div class="alert alert-danger">The form contains <%= pluralize(@period.errors.details.count, "error") %>.
+          </div>  
+        </div>
       <% else %>
         <div>tonto</div>        
       <% end %>
