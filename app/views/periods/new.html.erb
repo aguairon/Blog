@@ -5,8 +5,16 @@
 <div class="new_period_form">
   <% if admin_signed_in? %>
     <%= form_with(model: @period) do |form| %>
+      <% if @period.errors.any? %>
+        <div id="error_explanation">
+        <div class="alert alert-danger">The form contains <%= pluralize(@period.errors.details.count, "error") %>.
+        </div>  
+      <% else %>
+        <div>tonto</div>        
+      <% end %>
+      
       <div><%=form.label :title, 'Título' %>
-      <%= form.text_field :title, required: true, autofocus: true, minlength: 5%>
+      <%= form.text_field :title, autofocus: true%>
       <%= form.submit 'Crear periodo' %></div>
     <% end %>
   <% else %>
