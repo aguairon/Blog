@@ -17,10 +17,15 @@
 //= require turbolinks
 //= require_tree .
 
-// $(document).ready(function () {
+      $(document).ready(function () {
 
-//     $('#sidebarCollapse').on('click', function () {
-//         $('.site-header, .content').toggleClass('active');
-//     });
+        $('#siteHeaderCollapse').on('click', function () {
+          $('.site-header').addClass('active');
+          $('.overlay').fadeIn();
+        });
 
-// });
+        $('.overlay').on('click', function () {
+          $('.site-header').removeClass('active');
+          $('.overlay').fadeOut();
+        })
+      });
