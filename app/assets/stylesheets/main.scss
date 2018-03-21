@@ -109,7 +109,6 @@ a {
 a:hover {
   color: Gray;
 }
-
 /*-------------------------------------------
 Form styling
 -------------------------------------------*/
@@ -117,13 +116,16 @@ label {
   font-family: 'Oswald', sans-serif;
 }
 
-input[type=text] {
+input {
   width: 100%;
   padding: 10px 20px;
   margin: 8px 0;
   border: 1px solid #384A5F;
   font-size: 14px;
   font-family: 'Raleway', sans-serif;
+  &:invalid:not(:focus) {
+    background-color: #d3d3d3;
+  }
 }
 
 textarea {
@@ -170,6 +172,9 @@ MEDIAQUERIES
   #siteHeaderCollapse {
     display: none;
   }
+}
+.field #admin_remember_me{
+  right: 100px;
 }
 
 

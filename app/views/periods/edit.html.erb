@@ -1,11 +1,11 @@
 <% if admin_signed_in? %>
   <%= form_with(model: @period) do |form| %>
     <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.label :title, 'Título' %><br>
+    <%= form.text_field :title, required: true, autofocus: true, minlength: 5 %>
     </p>
     <p>
-    <%= form.submit %>
+    <%= form.submit "Salvar cambios" %>
     </p>
   <% end %>
 <% else %>

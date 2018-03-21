@@ -5,9 +5,9 @@
 <div class="new_period_form">
   <% if admin_signed_in? %>
     <%= form_with(model: @period) do |form| %>
-      <div><%=form.label :title %>
-      <%= form.text_field :title %>
-      <%= form.submit %></div>
+      <div><%=form.label :title, 'Título' %>
+      <%= form.text_field :title, required: true, autofocus: true, minlength: 5%>
+      <%= form.submit 'Crear periodo' %></div>
     <% end %>
   <% else %>
     <%= link_to "Log in", new_admin_session_path %>
