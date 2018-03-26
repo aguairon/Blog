@@ -2,7 +2,7 @@
   <h2>New Historic Period</h2>
 </header>
 
-<div class="new_period_form" id="new_period_form" novalidate>
+<div id="new_period_form" novalidate>
   <% if admin_signed_in? %>
     <%= form_with(model: @period) do |form| %>
       <% if @period.errors.any? %>
