@@ -2,25 +2,23 @@
   <h2>New Historic Period</h2>
 </header>
 
-<div id="new_period_form" novalidate>
-  <% if admin_signed_in? %>
-    <%= form_with(model: @period) do |form| %>
-      <% if @period.errors.any? %>
-        <div id="error_explanation">
-          <div class="alert alert-danger">The form contains <%= pluralize(@period.errors.details.count, "error") %>.
-          </div>  
-        </div>
-      <% else %>
-        <div>tonto</div>        
-      <% end %>
-      
-      <div><%=form.label :title, 'Título' %>
-      <%= form.text_field :title, autofocus: true, autofocus: true, :id => "test",  :required => true, :pattern => ".{6,}"%>
-      <div class="v">valid</div>
-      <div class="x"> not valid</div>
-      <%= form.submit 'Crear periodo' %></div>
+<% if admin_signed_in? %>
+  <%= form_with(model: @period, html: {novalidate: true, id: 'new_period_form'}) do |form| %>
+    <% if @period.errors.any? %>
+      <div id="error_explanation">
+        <div class="alert alert-danger">The form contains <%= pluralize(@period.errors.details.count, "error") %>.
+        </div>  
+      </div>
+    <% else %>
+      <div>tonto</div>        
     <% end %>
-  <% else %>
-    <%= link_to "Log in", new_admin_session_path %>
-  <% end %> 
-</div>
+      
+    <%=form.label :title, 'Título' %>
+    <%= form.text_field :title, autofocus: true, autofocus: true, :id => "test",  :required => true, :pattern => ".{6,}"%>
+    <div class="v">valid</div>
+    <div class="x"> not valid</div>
+    <%= form.submit 'Crear periodo' %></div>
+  <% end %>
+<% else %>
+  <%= link_to "Log in", new_admin_session_path %>
+<% end %> 
