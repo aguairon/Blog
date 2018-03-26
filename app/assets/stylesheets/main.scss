@@ -152,6 +152,19 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #293746;
 }
+input:invalid:not(:focus) {
+  border: 1px solid red; 
+}
+
+.v, .x {
+  display:none;
+}
+
+.x.active, .v.active {
+  display:block;
+  color:red;
+}
+
 
 /*-------------------------------------------
 MEDIAQUERIES

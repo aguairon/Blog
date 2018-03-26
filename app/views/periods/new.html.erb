@@ -16,6 +16,8 @@
       
       <div><%=form.label :title, 'Título' %>
       <%= form.text_field :title, autofocus: true, autofocus: true, :id => "test",  :required => true, :pattern => ".{6,}"%>
+      <div class="v">valid</div>
+      <div class="x"> not valid</div>
       <%= form.submit 'Crear periodo' %></div>
     <% end %>
   <% else %>
