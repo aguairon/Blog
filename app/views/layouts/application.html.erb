@@ -37,24 +37,24 @@
     function validateForm() {
       var input = document.getElementById('test');
       var form = document.getElementById('new_period_form');
+      var errorMessage = document.getElementById('error-message');
+
       if (form) {
         form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
+          errorMessage.classList.add("active"); 
         }
       }, false);
       };
+    
 
       if (input) {
         input.addEventListener('input', function () {
         if (input.validity.valid) {
-          $(".v").addClass("active"); 
-          $(".x").removeClass("active"); 
-        } else {
-          $(".v").removeClass("active"); 
-          $(".x").addClass("active"); 
-        }
+          errorMessage.classList.remove("active"); 
+        } 
       })
       }
     };

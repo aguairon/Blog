@@ -109,6 +109,7 @@ a {
 a:hover {
   color: Gray;
 }
+
 /*-------------------------------------------
 Form styling
 -------------------------------------------*/
@@ -123,9 +124,6 @@ input {
   border: 1px solid #384A5F;
   font-size: 14px;
   font-family: 'Raleway', sans-serif;
-  &:invalid:not(:focus) {
-    background-color: #d3d3d3;
-  }
 }
 
 textarea {
@@ -152,15 +150,21 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #293746;
 }
+
+input:focus {
+  outline: none !important;
+}
+
 input:invalid:not(:focus) {
+  width: 100%;
   border: 1px solid red; 
 }
 
-.v, .x {
+#error-message {
   display:none;
 }
 
-.x.active, .v.active {
+#error-message.active {
   display:block;
   color:red;
 }

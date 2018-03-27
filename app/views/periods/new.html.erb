@@ -8,15 +8,12 @@
       <div id="error_explanation">
         <div class="alert alert-danger">The form contains <%= pluralize(@period.errors.details.count, "error") %>.
         </div>  
-      </div>
-    <% else %>
-      <div>tonto</div>        
+      </div>     
     <% end %>
       
     <%=form.label :title, 'Título' %>
-    <%= form.text_field :title, autofocus: true, autofocus: true, :id => "test",  :required => true, :pattern => ".{6,}"%>
-    <div class="v">valid</div>
-    <div class="x"> not valid</div>
+    <%= form.text_field :title, autofocus: true, :id => "test", :required => true, :pattern => ".{6,}"%>
+    <div id="error-message"> Title is missing </div>
     <%= form.submit 'Crear periodo' %></div>
   <% end %>
 <% else %>
