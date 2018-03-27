@@ -104,10 +104,9 @@ h2 {
 a {
   color: #384A5F;
   text-decoration: none;
-}
-
-a:hover {
-  color: Gray;
+  &:hover {
+    color: Gray;
+  }
 }
 
 /*-------------------------------------------
@@ -115,6 +114,9 @@ Form styling
 -------------------------------------------*/
 label {
   font-family: 'Oswald', sans-serif;
+  &.active {
+    display:none;
+  }
 }
 
 input {
@@ -124,6 +126,12 @@ input {
   border: 1px solid #384A5F;
   font-size: 14px;
   font-family: 'Raleway', sans-serif;
+  &:focus {
+    outline: none !important;
+  }
+  &:invalid:not(:focus) {
+    border: 1px solid red; 
+  }
 }
 
 textarea {
@@ -144,29 +152,17 @@ input[type=submit] {
   border-radius: 5px;
   padding: 10px;
   font-size: 14px;
-
-}
-
-input[type=submit]:hover {
-  background-color: #293746;
-}
-
-input:focus {
-  outline: none !important;
-}
-
-input:invalid:not(:focus) {
-  width: 100%;
-  border: 1px solid red; 
+  &:hover {
+    background-color: #293746;
+  }
 }
 
 #error-message {
   display:none;
-}
-
-#error-message.active {
-  display:block;
-  color:red;
+  &.active{
+    display:block;
+    color:red;
+  }
 }
 
 
