@@ -3,18 +3,11 @@
 </header>
 
 <% if admin_signed_in? %>
-  <%= form_with(model: @period, html: {novalidate: true, id: 'new_period_form'}) do |form| %>
-    <% if @period.errors.any? %>
-      <div id="error_explanation">
-        <div class="alert alert-danger">The form contains <%= pluralize(@period.errors.details.count, "error") %>.
-        </div>  
-      </div>     
-    <% end %>
-      
-    <%=form.label :title, 'Título' %>
-    <%= form.text_field :title, autofocus: true, :id => "test", :required => true, :pattern => ".{6,}"%>
-    <div id="error-message"> Title is missing </div>
-    <%= form.submit 'Crear periodo' %></div>
+  <div id="error-message"> Title is missing </div>
+  <%= form_with(model: @period, html: {novalidate: true, id: 'new_period_form'}) do |form| %>    
+    <%=form.label :title, 'Título', :class => 'label', :id => 'title-label'%>
+    <%= form.text_field :title, autofocus: true, :id => "title-field", :required => true, :pattern => ".{6,}"%>
+    <%= form.submit 'Crear periodo' %>
   <% end %>
 <% else %>
   <%= link_to "Log in", new_admin_session_path %>

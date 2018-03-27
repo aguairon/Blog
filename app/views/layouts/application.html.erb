@@ -35,7 +35,7 @@
 
     <script type="text/javascript">
     function validateForm() {
-      var input = document.getElementById('test');
+      var input = document.getElementById('title-field');
       var form = document.getElementById('new_period_form');
       var errorMessage = document.getElementById('error-message');
 
@@ -45,6 +45,7 @@
           event.preventDefault();
           event.stopPropagation();
           errorMessage.classList.add("active"); 
+          $('.label').addClass("active");
         }
       }, false);
       };
