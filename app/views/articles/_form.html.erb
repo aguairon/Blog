@@ -1,24 +1,14 @@
-<%= form_with(model: @article) do |form| %>
- 
-  <% if @article.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-    <%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:
-    </h2>
-    <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-  <% end %>
+<div id="error-message"> Title is missing </div>
+<%= form_with(model: @article, html: {novalidate: true, class: 'form', id: 'article-form'}) do |form| %>
 
   <%= form.hidden_field :period_id, :value => @article.period_id%>
 
-  <div><%=form.label :title, 'Título' %>
-  <%= form.text_field :title%>
+  <%=form.label :title, 'Título', :class => 'label', :id => 'title-label' %>
+  <%= form.text_field :title, autofocus: true, :id => 'title-field', :required => true, :pattern=> ".{6,}" %>
+
   <%=form.label :text, 'Cuerpo del artículo' %>
   <%= form.text_area :text %>
+
   <%= form.submit 'Guardar artículo' %>
  
 <% end %>

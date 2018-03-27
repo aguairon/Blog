@@ -35,47 +35,48 @@
 
     <script type="text/javascript">
     function validateForm() {
+      var forms = document.getElementsByClassName('form');
+
+
       var input = document.getElementById('title-field');
-      var form = document.getElementById('new_period_form');
       var errorMessage = document.getElementById('error-message');
 
-      if (form) {
-        form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-          errorMessage.classList.add("active"); 
-          $('.label').addClass("active");
-        }
-      }, false);
-      };
-    
+      if (forms.length > 0) {
+        [].forEach.call(forms, function(form) {
+          form.addEventListener('submit', function(event) { 
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+              errorMessage.classList.add("active"); 
+              $('.label').addClass("active");
+            }
+          }, false);
+        });
 
-      if (input) {
         input.addEventListener('input', function () {
-        if (input.validity.valid) {
-          errorMessage.classList.remove("active"); 
-          $('.label').removeClass("active");
-        } 
-      })
-      }
+          if (input.validity.valid) {
+            errorMessage.classList.remove("active"); 
+            $('.label').removeClass("active");
+          } 
+        });
+      };
     };
 
-      $(document).ready(function () {
+    $(document).ready(function () {
 
-        $('#siteHeaderCollapse').on('click', function () {
-          $('.site-header').addClass('active');
-          $('.overlay').fadeIn();
-        });
-
-        $('.overlay').on('click', function () {
-          $('.site-header').removeClass('active');
-          $('.overlay').fadeOut();
-        });
-
-        validateForm();
-
+      $('#siteHeaderCollapse').on('click', function () {
+        $('.site-header').addClass('active');
+        $('.overlay').fadeIn();
       });
+
+      $('.overlay').on('click', function () {
+        $('.site-header').removeClass('active');
+        $('.overlay').fadeOut();
+      });
+
+      validateForm();
+
+    });
     </script>
   </body>
 </html>
