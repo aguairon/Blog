@@ -49,8 +49,6 @@
                 if (!input.validity.valid) {
                   input.style.border = '1px solid red';
                   input.previousElementSibling.classList.add('active');
-                  //not sure how to set next line to make titel dissappear
-                  // input.previousElementSibling.classList.remove('active');
                 }
               });
             }
@@ -62,7 +60,6 @@
             if (input.validity.valid) {
               input.style.border = '1px solid #384A5F';
               input.previousElementSibling.classList.remove('active');
-              // input.prevAll('.label:first').classList.remove('active');
             }
           });
         });
