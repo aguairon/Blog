@@ -157,7 +157,7 @@ input[type=submit] {
   }
 }
 
-#error-message {
+.error {
   display:none;
   &.active{
     font-family: 'Oswald', sans-serif;
