@@ -3,11 +3,11 @@
 
   <%=form.label :title, 'Título', :class => 'label', :id => 'title-label' %>
   <%= form.text_field :title, autofocus: true, :class => 'field', :id => 'title-field', :required => true, :pattern => ".{6,}" %>
-  <div class='error' id="error"> Title is missing </div>
+  <div class='error' id="error"> Título no es valido </div>
 
   <%=form.label :text, 'Cuerpo del artículo', :class => 'label', :id => 'article-label' %>
   <%= form.text_area :text, :class => 'field', :id => 'article-field', :required => true, :pattern => '.{6,}' %>
-  <div class='error' id="error">Falta el Articulo </div>
+  <div class='error' id="error">Artículo no es valido </div>
 
   <%= form.submit 'Guardar artículo' %>
  
