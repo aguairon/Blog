@@ -2,12 +2,12 @@
   <%= form.hidden_field :period_id, :value => @article.period_id%>
 
   <%=form.label :title, 'Título', :class => 'label', :id => 'title-label' %>
-  <div class='error' id="error"> Title is missing </div>
   <%= form.text_field :title, autofocus: true, :class => 'field', :id => 'title-field', :required => true, :pattern => ".{6,}" %>
+  <div class='error' id="error"> Title is missing </div>
 
   <%=form.label :text, 'Cuerpo del artículo', :class => 'label', :id => 'article-label' %>
-  <div class='error' id="error">Falta el Articulo </div>
   <%= form.text_area :text, :class => 'field', :id => 'article-field', :required => true, :pattern => '.{6,}' %>
+  <div class='error' id="error">Falta el Articulo </div>
 
   <%= form.submit 'Guardar artículo' %>
  

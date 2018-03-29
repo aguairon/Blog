@@ -48,7 +48,7 @@
               [].forEach.call(inputs, function(input) {
                 if (!input.validity.valid) {
                   input.style.border = '1px solid red';
-                  input.previousElementSibling.classList.add('active');
+                  input.nextElementSibling.classList.add('active');
                 }
               });
             }
@@ -59,7 +59,7 @@
           input.addEventListener('input', function() {
             if (input.validity.valid) {
               input.style.border = '1px solid #384A5F';
-              input.previousElementSibling.classList.remove('active');
+              input.nextElementSibling.classList.remove('active');
             }
           });
         });
