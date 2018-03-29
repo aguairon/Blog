@@ -161,7 +161,7 @@ input[type=submit] {
   display:none;
   &.active{
     font-family: 'Oswald', sans-serif;
-    display:block;
+    display: inline-block;
     color:red;
   }
 }
