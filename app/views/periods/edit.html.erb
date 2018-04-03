@@ -1,9 +1,5 @@
-<% if admin_signed_in? %>
-  <%= form_with(model: @period) do |form| %>
-    <%= form.label :title, 'Título' %><br>
-    <%= form.text_field :title, required: true, autofocus: true, minlength: 5 %>
-    <%= form.submit "Salvar cambios" %>
-  <% end %>
-<% else %>
-  <%= link_to "Log in", new_admin_session_path %>
-<% end %>
+<header>
+  <h1>Editar periodo histórico</h1>
+</header>
+
+<%= render 'form' %>

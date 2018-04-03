@@ -1,14 +1,5 @@
 <header>
-  <h2>New Historic Period</h2>
+  <h1>Nuevo periodo histórico</h1>
 </header>
 
-<% if admin_signed_in? %>
-  <%= form_with(model: @period, html: {novalidate: true, class: 'form', id: 'new_period_form'}) do |form| %>    
-    <%=form.label :title, 'Título', :class => 'label', :id => 'title-label'%>
-    <%= form.text_field :title, autofocus: true, :class => 'field', :id => "title-field", :required => true, :pattern => ".{6,}"%>
-    <div class='error' id="error"> Título no es valido </div>
-    <%= form.submit 'Crear periodo' %>
-  <% end %>
-<% else %>
-  <%= link_to "Log in", new_admin_session_path %>
-<% end %> 
+<%= render 'form' %>
