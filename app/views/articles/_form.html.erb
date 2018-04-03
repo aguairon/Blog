@@ -2,7 +2,7 @@
   <%= form.hidden_field :period_id, :value => @article.period_id%>
 
   <%=form.label :title, 'Título', :class => 'label', :id => 'title-label' %>
-  <%= form.text_field :title, autofocus: true, :class => 'field', :id => 'title-field', :required => true, :pattern => ".{6,}" %>
+  <%= form.text_field :title, autofocus: true, :class => 'field', :id => 'title-field', :required => true, :pattern => '.{6,}' %>
   <div class='error' id="error"> Título no es valido </div></br>
 
   <%=form.label :text, 'Cuerpo del artículo', :class => 'label', :id => 'article-label' %>

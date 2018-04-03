@@ -2,21 +2,16 @@
   <h1>Nuevo Personaje</h1>
 </header>
 
-<%= form_with(model: @character) do |form| %>
+<%= form_with(model: @character, html: {novalidate: true, class: 'form', id: 'character-form'}) do |form| %>
   <%= form.hidden_field :period_id, :value => @character.period_id%>
  
-  <p>
-  <%= form.label :name ,'Nombre' %><br>
-  <%= form.text_field :name, required: true, autofocus: true, minlength: 5 %>
-  </p>
+  <%= form.label :name ,'Nombre', :class => 'label', :id => 'name-label' %><br>
+  <%= form.text_field :name, autofocus: true, :class => 'field', :id => 'title-field', :required => true, :pattern => '.{6,}' %>
+  <div class='error' id="error"> Nombre no es valido </div></br>
  
-  <p>
-  <%= form.label :body, 'Artículo' %><br>
-  <%= form.text_area :body, required: true, autofocus: true, minlength: 5 %>
-  </p>
- 
-  <p>
+  <%= form.label :body, 'Artículo', :class => 'label', :id => 'character-label' %><br>
+  <%= form.text_area :body, :class => 'field', :id => 'article-field', :required => true, :pattern => '.{6,}' %>
+  <div class='error' id="error">Artículo no es valido </div>
+
   <%= form.submit 'Crea personaje' %>
-  </p>
- 
 <% end %>
