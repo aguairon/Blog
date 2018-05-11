@@ -1,9 +1,5 @@
 <header class="header article-header">
-  <h1><%= @article.title %>
-    <% if admin_signed_in? %>
-      <%= link_to 'Edit', edit_article_path(@article), class:"text-muted" %>
-    <% end %>
-  </h1>
+  <%= react_component('Title', title: @article.title, admin_signed_in: admin_signed_in?, path_title: 'Editar', path:edit_article_path(@article)) %>
 </header>
 
 <div class="article">
