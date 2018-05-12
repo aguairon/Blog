@@ -19,6 +19,10 @@ class CharactersController < ApplicationController
 		@character.period = Period.find(params[:period_id])
 	end
 
+	def edit
+  	@character = Character.find(params[:id])
+	end
+
 	def create
 		@period = Period.find(character_params[:period_id])
 		@character = @period.characters.create(character_params)

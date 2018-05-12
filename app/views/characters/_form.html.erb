@@ -1,0 +1,13 @@
+<%= form_with(model: @character, html: {novalidate: true, class: 'form', id: 'character-form'}) do |form| %>
+  <%= form.hidden_field :period_id, :value => @character.period_id%>
+ 
+  <%= form.label :name ,'Nombre', :class => 'label', :id => 'name-label' %><br>
+  <%= form.text_field :name, autofocus: true, :class => 'field', :id => 'title-field', :required => true, :pattern => '.{6,}' %>
+  <div class='error' id="error"> Nombre no es valido </div></br>
+ 
+  <%= form.label :body, 'Artículo', :class => 'label', :id => 'character-label' %><br>
+  <%= form.text_area :body, :class => 'field', :id => 'article-field', :required => true, :pattern => '.{6,}' %>
+  <div class='error' id="error">Artículo no es valido </div>
+
+  <%= form.submit 'Crea personaje' %>
+<% end %>
