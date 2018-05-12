@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
  			title: "Articulos sobre #{@period.title}",
 		  admin_signed_in: admin_signed_in?, 
 		  path_title: 'Nuevo artículo', 
-		  path: new_article_path(@period)
+		  path: new_article_path(period_id: @period)
 		}
 	end
 
