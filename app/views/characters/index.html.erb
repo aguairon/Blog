@@ -1,5 +1,5 @@
 <header class="header character-header">
-  <h1>Personajes relacionados con <%= @period.title %><%= link_to "Nuevo personaje", new_character_path(period_id: @period) %></h1>
+	<%= react_component('Title', @props) %>
 </header>
 <div class="list character_list">
   <%= render :partial => "aplication/character", :collection => @characters %>

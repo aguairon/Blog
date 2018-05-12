@@ -2,6 +2,12 @@ class CharactersController < ApplicationController
 	def index
 		@period = Period.find(params[:period_id])
  		@characters = @period.characters
+ 		@props = {
+ 			title: "Personajes relacionados con #{@period.title}",
+		  admin_signed_in: admin_signed_in?, 
+		  path_title: 'Nuevo Personaje', 
+		  path: new_character_path(period_id: @period)
+		}
 	end
 
 	def show
