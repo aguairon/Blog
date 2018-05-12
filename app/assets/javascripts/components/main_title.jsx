@@ -1,3 +1,4 @@
+
 class Title extends React.Component {
   render(){
   	let p;
@@ -13,5 +14,11 @@ class Title extends React.Component {
       </div>
     )
   }
-};
+}
 
+Title.propTypes = {
+	title: PropTypes.string.isRequired,
+	admin_signed_in: PropTypes.bool,
+	path_title: PropTypes.string,
+	path: PropTypes.string
+};
