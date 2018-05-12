@@ -7,6 +7,12 @@ class PeriodsController < ApplicationController
  		@period = Period.find(params[:id])
  		@articles = @period.articles.limit(5)
  		@characters = @period.characters.limit(2)
+	 	@props = {
+		 	title: @period.title,
+			admin_signed_in: admin_signed_in?, 
+			path_title: 'Editar', 
+			path: edit_period_path(@period)
+		}
  	end
 
  	def new

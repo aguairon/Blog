@@ -1,6 +1,6 @@
 class Title extends React.Component {
   render(){
-   
+  	let p;
     if (this.props.admin_signed_in) {
     	p = <a href={this.props.path} className="text-muted">{this.props.path_title}</a>;
     } else {

@@ -2,10 +2,22 @@ class ArticlesController < ApplicationController
 	def index
 		@period = Period.find(params[:period_id])
  		@articles = @period.articles
+ 		@props = {
+ 			title: "Articulos sobre #{@period.title}",
+		  admin_signed_in: admin_signed_in?, 
+		  path_title: 'Nuevo artículo', 
+		  path: new_article_path
+		}
 	end
 
 	def show
 		@article = Article.find(params[:id])
+		@props = {
+ 			title: @article.title,
+		  admin_signed_in: admin_signed_in?, 
+		  path_title: 'Editar', 
+		  path: edit_article_path(@article)
+		}		
 	end
 
 	def new
