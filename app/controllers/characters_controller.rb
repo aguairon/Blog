@@ -6,7 +6,13 @@ class CharactersController < ApplicationController
 
 	def show
   	@character = Character.find(params[:id])
-  	end
+  	@props = {
+ 			title: @character.name,
+		  admin_signed_in: admin_signed_in?, 
+		  path_title: 'Editar', 
+		  path: edit_character_path(@character)
+		}
+  end
 
 	def new
 		@character = Character.new	
