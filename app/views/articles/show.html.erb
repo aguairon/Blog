@@ -2,9 +2,7 @@
   <%= react_component('TitleWithLink', @props) %>
 </header>
 
-<div class="article">
-  <p><%= @article.text %></p>
-</div>
+<%= react_component('ArticleText', text: @article.text) %>
 
 <div class="comments">
   <h2>Comments</h2>
