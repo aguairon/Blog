@@ -1,5 +1,4 @@
-
-class Title extends React.Component {
+class TitleWithLink extends React.Component {
   render(){
   	let p;
     if (this.props.admin_signed_in) {
@@ -16,7 +15,7 @@ class Title extends React.Component {
   }
 }
 
-Title.propTypes = {
+TitleWithLink.propTypes = {
 	title: PropTypes.string.isRequired,
 	admin_signed_in: PropTypes.bool,
 	path_title: PropTypes.string,
