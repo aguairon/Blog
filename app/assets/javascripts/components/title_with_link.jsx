@@ -1,7 +1,9 @@
 class TitleWithLink extends React.Component {
   render(){
     return(
-      <h1 className='main'>{this.props.title} { this.props.admin_signed_in && <a href={this.props.path} className="text-muted">{this.props.path_title}</a> }</h1>
+      <h1 className='main'>{this.props.title} 
+      { this.props.admin_signed_in && <a href={this.props.path} className="text-muted">{this.props.path_title}</a> }
+      </h1>
     )
   }
 }
