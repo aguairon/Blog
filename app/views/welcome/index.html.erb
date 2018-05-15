@@ -3,11 +3,11 @@
   <%= react_component('TitleWithLink', @props) %>
 </header>
 
-<div class="list periods_list">
+<ul class="list periods_list">
   <% @periods.each do |period| %>
-    <div><%= link_to period.title, period_path(period) %></div>
+    <li><%= link_to period.title, period_path(period) %></li>
   <% end %>
-</div>
+</ul>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
