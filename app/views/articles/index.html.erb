@@ -1,7 +1,4 @@
-
-<header class="header article-header">
-  <%= react_component('TitleWithLink', @props) %>
-</header>
+<%= react_component('TitleWithLink', @props) %>
 <div class="list articles_list">
   <%= render :partial => "aplication/article", :collection => @articles %>
 </div>
