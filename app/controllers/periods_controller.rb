@@ -1,6 +1,9 @@
 class PeriodsController < ApplicationController
 	def index
   		@periods = Period.all
+      @props = {
+        periods: @periods
+      }
  	end
 
  	def show
