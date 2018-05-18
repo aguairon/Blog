@@ -1,9 +1,6 @@
+<%= react_component('TitleWithLink', @props) %>
 
-<header class="header period-header">
-  <%= react_component('TitleWithLink', @props) %>
-</header>
-
-<%= react_component('List', { periods: @periods }) %>
+<%= react_component('List', { items: @periods, path: '/periods/' }) %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
