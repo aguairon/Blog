@@ -4,9 +4,7 @@
   <div class="section section_articulos">
     <h2>Artículos</h2>
     <% if @articles.size > 0 %>
-      <div class="list articles_list">
-        <%= render :partial => "aplication/article", :collection => @articles %>
-      </div>
+      <%= react_component('List', @articleProps)%>
       <div class="more more-articules"><%= link_to "Más artículos", articles_path(period_id: @period) %></div>
     <% else %>
       <p class="empty">Viene pronto</p>
@@ -16,9 +14,7 @@
   <div class="section section_personajes">
     <h2>Personajes</h2>
     <% if @characters.size > 0 %>
-      <div class="list characters-list">
-        <%= render :partial => "aplication/character", :collection => @characters %>
-      </div>
+      <%= react_component('List', @characterProps)%>
       <div class="more more-characters"><%= link_to "Más personajes", characters_path(period_id: @period) %></div>
     <% else %>
         <p class="empty">Viene pronto</p>

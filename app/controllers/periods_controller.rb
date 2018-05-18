@@ -13,6 +13,14 @@ class PeriodsController < ApplicationController
 			path_title: 'Editar', 
 			path: edit_period_path(@period)
 		}
+    @articleProps = {
+      items: @articles,
+      path: '/articles/'
+    }
+    @characterProps = {
+      items: @characters,
+      path: '/characters/'
+    }
  	end
 
  	def new
