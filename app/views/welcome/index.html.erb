@@ -1,6 +1,6 @@
 <%= react_component('TitleWithLink', @props) %>
 
-<%= react_component('List', { items: @periods, path: '/periods/' }) %>
+<%= react_component('List', @listProps) %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>

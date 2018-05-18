@@ -15,4 +15,5 @@ class List extends React.Component {
 
 List.propTypes = {
   items: PropTypes.array.isRequired,
+  path: PropTypes.string.isRequired
 };
