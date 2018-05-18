@@ -8,6 +8,10 @@ class ArticlesController < ApplicationController
 		  path_title: 'Nuevo artículo', 
 		  path: new_article_path(period_id: @period)
 		}
+    @listProps = {
+      items: @articles,
+      path: '/articles/'
+    }
 	end
 
 	def show
