@@ -5,7 +5,7 @@
     <h2>Artículos</h2>
     <% if @articles.size > 0 %>
       <%= react_component('List', @props[:articles])%>
-      <div class="more more-articules"><%= link_to "Más artículos", articles_path(period_id: @period) %></div>
+      <%= react_component('MoreLink', @props[:articles])%>
     <% else %>
       <p class="empty">Viene pronto</p>
     <% end %>
@@ -15,7 +15,7 @@
     <h2>Personajes</h2>
     <% if @characters.size > 0 %>
       <%= react_component('List', @props[:characters])%>
-      <div class="more more-characters"><%= link_to "Más personajes", characters_path(period_id: @period) %></div>
+      <%= react_component('MoreLink', @props[:characters])%>
     <% else %>
         <p class="empty">Viene pronto</p>
     <% end %>

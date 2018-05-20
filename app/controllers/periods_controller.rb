@@ -14,11 +14,15 @@ class PeriodsController < ApplicationController
 			path: edit_period_path(@period),
       articles: {
         items: @articles,
-        path: '/articles/'
+        path: '/articles/',
+        linked_items_path: articles_path(period_id: @period),
+        linked_items_title: 'Más artículos'
       },
       characters: {
         items: @characters,
-        path: '/characters/'
+        path: '/characters/',
+        linked_items_path: characters_path(period_id: @period),
+        linked_items_title: 'Más personajes'
       }
 		}
  	end
