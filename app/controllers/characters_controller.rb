@@ -3,10 +3,12 @@ class CharactersController < ApplicationController
 		@period = Period.find(params[:period_id])
  		@characters = @period.characters
  		@props = {
- 			title: "Personajes relacionados con #{@period.title}",
-		  admin_signed_in: admin_signed_in?, 
-		  path_title: 'Nuevo Personaje', 
-		  path: new_character_path(period_id: @period),
+      title: {
+        text: "Personajes relacionados con #{@period.title}",
+        admin_signed_in: admin_signed_in?, 
+        path_title: 'Nuevo Personaje', 
+        path: new_character_path(period_id: @period),
+      },
       list: {
         items: @characters,
         path: '/characters/'
@@ -17,7 +19,7 @@ class CharactersController < ApplicationController
 	def show
   	@character = Character.find(params[:id])
   	@props = {
- 			title: @character.name,
+ 			text: @character.name,
 		  admin_signed_in: admin_signed_in?, 
 		  path_title: 'Editar', 
 		  path: edit_character_path(@character)

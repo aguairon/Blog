@@ -1,5 +1,5 @@
-<%= react_component('TitleWithLink', @props) %>
-<%= react_component('List', @listProps) %>
+<%= react_component('TitleWithLink', @props[:title]) %>
+<%= react_component('List', @props[:list]) %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
