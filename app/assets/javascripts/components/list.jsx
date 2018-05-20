@@ -2,15 +2,10 @@ class List extends React.Component {
   render() {
     const items = this.props.items;
     const item = items.map(item => {
-      if (item.title) {
-        return (
-          <li key={`${item.id}`}><a href= {this.props.path + item.id}>{item.title}</a></li>
-        )
-      } else {
-        return (
-          <li key={`${item.id}`}><a href= {this.props.path + item.id}>{item.name}</a></li>
-        )
-      }
+      const text = item.title || item.name
+      return (
+        <li key={`${item.id}`}><a href= {this.props.path + item.id}>{text}</a></li>
+      )
     });
 
     return (
