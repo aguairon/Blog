@@ -25,6 +25,11 @@ class PeriodsController < ApplicationController
         path: '/characters/',
         linked_items_path: characters_path(period_id: @period),
         linked_items_title: 'Más personajes'
+      }, 
+      admin: {
+        admin_signed_in: admin_signed_in?, 
+        path_title: 'Nuevo Personaje',
+        path: new_character_path(period_id: @period)
       }
 		}
  	end

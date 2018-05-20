@@ -8,6 +8,7 @@
       <%= react_component('MoreLink', @props[:articles])%>
     <% else %>
       <p class="empty">Viene pronto</p>
+      <%= react_component('AdminLink', @props[:admin]) %>
     <% end %>
   </div>
 
@@ -18,6 +19,7 @@
       <%= react_component('MoreLink', @props[:characters])%>
     <% else %>
         <p class="empty">Viene pronto</p>
+        <%= react_component('AdminLink', @props[:admin]) %>
     <% end %>
   </div>
 
