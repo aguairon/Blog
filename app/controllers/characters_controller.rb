@@ -6,7 +6,11 @@ class CharactersController < ApplicationController
  			title: "Personajes relacionados con #{@period.title}",
 		  admin_signed_in: admin_signed_in?, 
 		  path_title: 'Nuevo Personaje', 
-		  path: new_character_path(period_id: @period)
+		  path: new_character_path(period_id: @period),
+      list: {
+        items: @characters,
+        path: '/characters/'
+      }
 		}
 	end
 

@@ -1,4 +1,2 @@
 <%= react_component('TitleWithLink', @props) %>
-<div class="list character_list">
-  <%= render :partial => "aplication/character", :collection => @characters %>
-</div>
+<%= react_component('List', @props[:list]) %>
