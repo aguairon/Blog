@@ -11,16 +11,16 @@ class PeriodsController < ApplicationController
 		 	title: @period.title,
 			admin_signed_in: admin_signed_in?, 
 			path_title: 'Editar', 
-			path: edit_period_path(@period)
+			path: edit_period_path(@period),
+      articles: {
+        items: @articles,
+        path: '/articles/'
+      },
+      characters: {
+        items: @characters,
+        path: '/characters/'
+      }
 		}
-    @articleProps = {
-      items: @articles,
-      path: '/articles/'
-    }
-    @characterProps = {
-      items: @characters,
-      path: '/characters/'
-    }
  	end
 
  	def new
