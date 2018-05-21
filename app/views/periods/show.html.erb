@@ -1,25 +1,14 @@
 <%= react_component('TitleWithLink', @props[:title] ) %>
 
 <div class="sections">
-  <div class="section section_articulos">
-    <h2>Artículos</h2>
-    <% if @articles.size > 0 %>
-      <%= react_component('List', @props[:articles])%>
-      <%= react_component('MoreLink', @props[:articles])%>
-    <% else %>
-      <p class="empty">Viene pronto</p>
-      <%= react_component('AdminLink', @props[:admin]) %>
-    <% end %>
-  </div>
+  <%= react_component('Section', {section: @props[:articles], admin: @props[:admin]}) %>
 
   <div class="section section_personajes">
     <h2>Personajes</h2>
     <% if @characters.size > 0 %>
-      <%= react_component('List', @props[:characters])%>
-      <%= react_component('MoreLink', @props[:characters])%>
+     <%= react_component('SectionHasItems', @props[:characters])%>
     <% else %>
-        <p class="empty">Viene pronto</p>
-        <%= react_component('AdminLink', @props[:admin]) %>
+      <%= react_component('SectionIsEmpty', @props[:admin]) %>
     <% end %>
   </div>
 

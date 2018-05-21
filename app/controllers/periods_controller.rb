@@ -15,6 +15,8 @@ class PeriodsController < ApplicationController
         path: edit_period_path(@period),
       },
       articles: {
+        title: 'Artículos',
+        class_name: "section_articles",
         items: @articles,
         path: '/articles/',
         linked_items_path: articles_path(period_id: @period),

@@ -5,3 +5,8 @@ class AdminLink extends React.Component{
     )
   }
 }
+
+AdminLink.propTypes = {
+  path_title: PropTypes.string,
+  path: PropTypes.string
+};
