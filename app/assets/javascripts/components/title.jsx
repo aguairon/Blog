@@ -7,3 +7,7 @@ class Title extends React.Component {
 	}
 }
 
+Title.PropTypes = {
+  title: PropTypes.string.isRequired
+}
+

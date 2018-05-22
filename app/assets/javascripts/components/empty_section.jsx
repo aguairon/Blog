@@ -4,7 +4,9 @@ class SectionIsEmpty extends React.Component{
     return (
       <div>
         <p className='empty'>Viene pronto</p>
-        <AdminLink {...newProps}/>
+        <div className='more'>
+          <AdminLink {...newProps}/>
+        </div>
       </div>
     )
   }

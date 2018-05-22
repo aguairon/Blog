@@ -13,7 +13,5 @@ class TitleWithLink extends React.Component {
 
 TitleWithLink.propTypes = {
 	text: PropTypes.string.isRequired,
-	admin_signed_in: PropTypes.bool,
-	path_title: PropTypes.string,
-	path: PropTypes.string
+	admin_signed_in: PropTypes.bool.isRequired
 };

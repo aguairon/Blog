@@ -7,3 +7,7 @@ class ArticleText extends React.Component{
     )
   }
 }
+
+ArticleText.propTypes = {
+  text: PropTypes.string.isRequired
+}

@@ -6,3 +6,8 @@ class MoreLink extends React.Component{
     )
   }
 }
+
+MoreLink.propTypes = {
+  linked_items_path: PropTypes.string.isRequired,
+  linked_items_title: PropTypes.string.isRequired
+}
