@@ -41,14 +41,18 @@ class PeriodsController < ApplicationController
  	def new
  		@period = Period.new
  		@props = {
- 			title: 'Nuevo Periodo Historico'
+ 			title: {
+        text: 'Nuevo Periodo Historico'
+      }
  		}
  	end
 	 
 	def edit
 		@period = Period.find(params[:id])
 		@props = {
-			title: 'Editar periodo histórico'
+			title: {
+        text: 'Editar periodo histórico'
+      }
 		}
 	end
 

@@ -1,6 +1,6 @@
 class PageTitle extends React.Component {
   admin(props) {
-    if (props.admin_signed_in && props.admin) {
+    if (props.admin_signed_in && props.link) {
       return (
         <AdminLink {...props}/>
       );
@@ -19,6 +19,11 @@ class PageTitle extends React.Component {
     )
   }
 }
+
+PageTitle.defaultProps = {
+  link: true,
+  admin_signed_in: false
+};
 
 PageTitle.propTypes = {
 	text: PropTypes.string.isRequired,

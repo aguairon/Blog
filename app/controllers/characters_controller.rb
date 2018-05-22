@@ -30,14 +30,18 @@ class CharactersController < ApplicationController
 		@character = Character.new	
 		@character.period = Period.find(params[:period_id])
 		@props = {
-			title: "Nuevo Personaje"
+			title: {
+        text: "Nuevo Personaje"
+      }
 		}
 	end
 
 	def edit
   	@character = Character.find(params[:id])
   	@props = {
-  		title: 'Editar Character'
+  		title: {
+        text: 'Editar Character'
+      }
   	}
 	end
 

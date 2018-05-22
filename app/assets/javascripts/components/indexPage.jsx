@@ -4,7 +4,7 @@ class IndexPage extends React.Component{
     const list = {...this.props.list};
     return(
       <div>
-        <PageTitle {...title} admin/>
+        <PageTitle {...title} link/>
         <List {...list}/>
       </div>
     )

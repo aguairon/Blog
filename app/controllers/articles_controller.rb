@@ -32,14 +32,18 @@ class ArticlesController < ApplicationController
 		@article = Article.new	
 		@article.period = Period.find(params[:period_id])
     @props = {
-      title: 'Nuevo artículo'
+      title: {
+        text: 'Nuevo artículo'
+      }
     }
 	end
 
 	def edit
   	@article = Article.find(params[:id])
     @props = {
-      title: 'Editar artículo'
+      title: {
+        text: 'Editar artículo'
+      }
     }
 	end
 
