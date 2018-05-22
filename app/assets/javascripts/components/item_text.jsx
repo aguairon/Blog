@@ -1,13 +1,13 @@
-class ArticleText extends React.Component{
+class ItemText extends React.Component{
   render() {
     return (
-      <div className='article'>
+      <div className='text'>
         <p>{this.props.text}</p>
       </div>
     )
   }
 }
 
-ArticleText.propTypes = {
+ItemText.propTypes = {
   text: PropTypes.string.isRequired
 }

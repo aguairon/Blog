@@ -1,5 +1,2 @@
 <%= react_component('PageTitle', @props) %>
-
-<div class="character">
-  <p><%= @character.body %></p>
-</div>
+<%= react_component('ItemText', text: @character.body) %>
