@@ -2,12 +2,14 @@
 class Title extends React.Component {
 	render() {
 		return (
-			<h1>{this.props.title}</h1>
+      <header>
+			 <h1>{this.props.title}</h1>
+      </header>
 		)
 	}
 }
 
-Title.PropTypes = {
+Title.propTypes = {
   title: PropTypes.string.isRequired
 }
 
