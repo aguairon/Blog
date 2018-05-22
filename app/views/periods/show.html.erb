@@ -2,15 +2,7 @@
 
 <div class="sections">
   <%= react_component('Section', {section: @props[:articles], admin: @props[:admin]}) %>
-
-  <div class="section section_personajes">
-    <h2>Personajes</h2>
-    <% if @characters.size > 0 %>
-     <%= react_component('SectionHasItems', @props[:characters])%>
-    <% else %>
-      <%= react_component('SectionIsEmpty', @props[:admin]) %>
-    <% end %>
-  </div>
+  <%= react_component('Section', {section: @props[:characters], admin: @props[:admin]})%>
 
   <div class="section section_galeria">
     <h2>Galeria</h2>

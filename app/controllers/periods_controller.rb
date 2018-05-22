@@ -23,6 +23,8 @@ class PeriodsController < ApplicationController
         linked_items_title: 'Más artículos'
       },
       characters: {
+        title: 'Personajes',
+        class_name: 'section_characters',
         items: @characters,
         path: '/characters/',
         linked_items_path: characters_path(period_id: @period),
