@@ -1,8 +1,9 @@
 class ItemText extends React.Component{
   render() {
+    const text = this.props.text || this.props.body;
     return (
       <div className='text'>
-        <p>{this.props.text}</p>
+        <p>{text}</p>
       </div>
     )
   }

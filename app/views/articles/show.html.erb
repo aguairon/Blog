@@ -1,5 +1,4 @@
-<%= react_component('PageTitle', @props[:title]) %>
-<%= react_component('ItemText', text: @article.text) %>
+<%= react_component('ShowItemPage', {title: @props[:title], text: @article}) %>
 
 <!-- <div class="comments">
   <h2>Comments</h2>
