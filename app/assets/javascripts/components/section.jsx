@@ -22,3 +22,7 @@ class Section extends React.Component{
     )
   }
 }
+
+Section.defaultProps = {
+  admin: true,
+};

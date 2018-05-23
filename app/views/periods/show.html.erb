@@ -1,7 +1,2 @@
 <%= react_component('PageTitle', @props[:title] ) %>
-
-<div class="sections">
-  <%= react_component('Section', {section: @props[:articles], admin: @props[:admin]}) %>
-  <%= react_component('Section', {section: @props[:characters], admin: @props[:admin]})%>
-</div>
-
+<%= react_component('Sections', {sections: [{section: @props[:articles]}, {section: @props[:characters]}], admin: @props[:admin]}) %>
