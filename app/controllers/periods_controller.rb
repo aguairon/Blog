@@ -66,27 +66,6 @@ class PeriodsController < ApplicationController
 		end
  	end
 
-
-
-# def create
-#     @project = Project.new(project_params)
-
-#     respond_to do |format|
-#       if @project.save
-#         format.html { redirect_to @project, notice: 'Project was successfully created.' }
-
-#         format.json { render json: Project.all.order(:name) }
-
-#       else
-#         format.html { render :new }
-#       end
-#     end
-#   end
-
-
-
-
-
  	def update
 	  @period = Period.find(params[:id])
 	 
