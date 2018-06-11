@@ -3,6 +3,7 @@ class Form extends React.Component {
     super(props);
     this.state = { title:'' };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmitm= this.handleSubmit.bind(this);
 
   }
 
@@ -11,11 +12,9 @@ class Form extends React.Component {
 
   }
 
-
-  // handleSubmit: function(e) {
-  //   e.preventDefault();
-  //   console.log("submitted");
-  // }
+  handleSubmit(event) {
+    event.preventDefault();
+  }
 
   render() {
     return(
