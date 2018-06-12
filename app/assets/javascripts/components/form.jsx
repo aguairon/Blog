@@ -30,7 +30,7 @@ class Form extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label>
         Título
-          <input type='text' name='title-field' autoFocus value={this.state.title} onChange={this.handleChange} />
+          <input type='text' name='title-field' autoFocus required pattern=".{6,}" value={this.state.title} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Crear período" />
       </form>
