@@ -14,18 +14,14 @@ class Form extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // const period = {period: { title: "jejjjjsj" }};
-    const period = {period: this.state};
-
-
+  
     $.ajax({
       url: "/periods",
       dataType: 'json',
       type: 'POST',
-      data:  period,
-      success: function(data) {
-        this.setState({data: user});
-      }.bind(this),
+      data:  {period: this.state},
+      success:
+        window.location.href= "/"
     });
   }
 
