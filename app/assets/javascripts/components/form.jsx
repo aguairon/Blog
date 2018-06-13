@@ -1,7 +1,10 @@
 class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { title:'' };
+    this.state = { 
+      title:'',
+      valid: true
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -9,20 +12,26 @@ class Form extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({ title: event.target.value })
+    this.setState({ title: event.target.value });
   }
 
   handleSubmit(event) {
     event.preventDefault();
-  
-    $.ajax({
-      url: "/periods",
-      dataType: 'json',
-      type: 'POST',
-      data:  {period: this.state},
-      success:
-        window.location.href= "/"
-    });
+    if (this.state.title.length < 5) {
+      this.setState({ valid: false }); 
+ 
+    } else {
+      this.setState({ valid: true });
+      const title = this.state.title;
+      $.ajax({
+        url: "/periods",
+        dataType: 'json',
+        type: 'POST',
+        data:  {period: {title}},
+        success:
+          window.location.href= "/"
+      })
+    }
   }
 
   render() {
@@ -30,7 +39,8 @@ class Form extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label>
         Título
-          <input type='text' name='title-field' autoFocus required pattern=".{6,}" value={this.state.title} onChange={this.handleChange} />
+          <input type='text' name='title-field' autoFocus  value={this.state.title} onChange={this.handleChange} />
+          {!this.state.valid && <div style={{color:"red"}}>Este título no es válido</div>}
         </label>
         <input type="submit" value="Crear período" />
       </form>
