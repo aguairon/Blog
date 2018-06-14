@@ -13,6 +13,7 @@ class Form extends React.Component {
 
   handleChange(event) {
     this.setState({ title: event.target.value });
+    this.setState({valid: true});
   }
 
   handleSubmit(event) {
