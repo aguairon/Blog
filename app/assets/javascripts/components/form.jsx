@@ -1,8 +1,9 @@
 class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      title:'',
+
+    this.state = {
+      title: props.title ,
       valid: true
     };
 
@@ -18,7 +19,7 @@ class Form extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    if (this.state.title.length < 5) {
+    if (this.state.title === undefined || this.state.title.length < 5) {
       this.setState({ valid: false }); 
  
     } else {
