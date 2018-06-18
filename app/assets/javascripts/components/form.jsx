@@ -3,8 +3,9 @@ class Form extends React.Component {
     super(props);
 
     this.state = {
-      title: props.title ,
-      valid: true
+      title: props.period.title,
+      valid: true,
+      id: props.period.id
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -17,7 +18,7 @@ class Form extends React.Component {
     this.setState({valid: true});
   }
 
-  handleSubmit(event) {
+  handleSubmit(event, props) {
     event.preventDefault();
     if (this.state.title === undefined || this.state.title.length < 5) {
       this.setState({ valid: false }); 
@@ -25,8 +26,15 @@ class Form extends React.Component {
     } else {
       this.setState({ valid: true });
       const title = this.state.title;
+      let url;
+      if (this.state.id !==  undefined) {
+        url = "/periods/" + this.state.id;
+      } else {
+        url = "/periods"
+      }
+
       $.ajax({
-        url: "/periods",
+        url: url,
         dataType: 'json',
         type: 'POST',
         data:  {period: {title}},
