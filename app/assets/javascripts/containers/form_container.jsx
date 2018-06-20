@@ -1,6 +1,7 @@
 class FormContainer extends React.Component {
   constructor(props) {
     super(props);
+
     let title;
     let id;
     if (props.period) {
@@ -31,7 +32,6 @@ class FormContainer extends React.Component {
       this.setState({ valid: false }); 
  
     } else {
-      this.setState({ valid: true });
       const title = this.state.title;
       let url;
       let method;
@@ -60,7 +60,7 @@ class FormContainer extends React.Component {
         onSubmit={this.handleSubmit}
         value={this.state.title}
         onChange={this.handleChange}
-        valid={this.state.valid}/>
+        valid={this.state.valid} />
     )
   }
 }
