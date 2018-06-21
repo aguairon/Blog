@@ -17,13 +17,13 @@ class FormMultipleFields extends React.Component {
   }
 
   handleSubmit(event) {
-    event.PreventDefault();
+    event.preventDefault();
 
     if (this.state.name.length < 5 || this.state.life.length < 10) {
       if (this.state.name.length < 5) {
-        this.setState({validName: false});
+        this.setState({valid_name: false});
       } else {
-      this.setState({ validLife: false });
+      this.setState({ valid_life: false });
       }
     } else {
       ///ajax call
