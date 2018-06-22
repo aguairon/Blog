@@ -22,7 +22,7 @@ class FormContainer extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({ title: event.target.value, valid: true });
+    this.setState({ [event.target.name]: event.target.value, valid: true });
   }
 
   handleSubmit(event) {
