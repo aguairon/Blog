@@ -25,7 +25,7 @@ class FormContainer extends React.Component {
     this.setState({ title: event.target.value, valid: true });
   }
 
-  handleSubmit(event, props) {
+  handleSubmit(event) {
     event.preventDefault();
     if (this.state.title.length < 5) {
       this.setState({ valid: false }); 
