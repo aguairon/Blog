@@ -58,6 +58,16 @@ class CharactersController < ApplicationController
 		end
 	end
 
+  def update
+    @character = Character.find(params[:id])
+
+    if @character.update(character_params)
+      redirect_to @character
+    else
+      render 'edit'
+    end
+  end
+
 	private 
 	def character_params
 		p params.require(:character).permit(:name, :body, :period_id)
