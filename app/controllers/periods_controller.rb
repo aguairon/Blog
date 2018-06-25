@@ -74,7 +74,7 @@ class PeriodsController < ApplicationController
 	  else
 	    render 'edit'
 	  end
-  	end
+  end
 
  	private 
 	def period_params
