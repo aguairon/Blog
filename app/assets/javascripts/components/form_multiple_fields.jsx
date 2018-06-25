@@ -1,12 +1,25 @@
 class FormMultipleFields extends React.Component {
   constructor(props) {
     super(props);
+
+    let name;
+    let body;
+    if (props.character.name || props.character.body) {
+      name = props.character.name;
+      body = props.character.body
+
+    } else {
+      name = "";
+      body = "";
+    }
+
     this.state = {
-      name: "",
-      body: "",
-      period_id: props.period_id,
+      name: name,
+      body: body,
+      period_id: props.character.period_id,
       valid_name: true,
-      valid_body: true
+      valid_body: true,
+      character_id: props.character.id
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,11 +42,22 @@ class FormMultipleFields extends React.Component {
     } else {
       const period_id = this.state.period_id;
       const name = this.state.name;
-      const body = this.state.body 
+      const body = this.state.body;
+      const character_id = this.state.character_id;
+      let url;
+      let method;
+      if (this.state.character_id) {
+        url = "/characters/" + this.state.character_id;
+        method = "PATCH";
+      } else {
+        url = "characters";
+        method = "POST";
+      }
+
       $.ajax({
-        url: "/characters",
+        url: url,
         dataType: 'json',
-        type: "POST",
+        type: method,
         data:  {character: {period_id, name, body}},
         success:
           window.location.href= "/characters?period_id=" + this.state.period_id
