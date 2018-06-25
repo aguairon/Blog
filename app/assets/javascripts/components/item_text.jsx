@@ -10,5 +10,6 @@ class ItemText extends React.Component{
 }
 
 ItemText.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string,
+  body: PropTypes.string
 }
