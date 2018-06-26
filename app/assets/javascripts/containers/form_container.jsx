@@ -4,9 +4,9 @@ class FormContainer extends React.Component {
 
     let title;
     let id;
-    if (props.period) {
-      title = props.period.title;
-      id = props.period.id;
+    if (props) {
+      title = props.title;
+      id = props.id;
     } else {
       title = "";
     }

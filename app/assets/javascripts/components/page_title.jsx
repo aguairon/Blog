@@ -1,6 +1,6 @@
 class PageTitle extends React.Component {
   admin(props) {
-    if (props.admin_signed_in && props.link) {
+    if (props.admin_signed_in) {
       return (
         <AdminLink {...props}/>
       );
@@ -21,7 +21,6 @@ class PageTitle extends React.Component {
 }
 
 PageTitle.defaultProps = {
-  link: true,
   admin_signed_in: false
 };
 
