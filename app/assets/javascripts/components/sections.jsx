@@ -1,9 +1,9 @@
 class Sections extends React.Component{
   render() {
     const sections = this.props.sections;
-    const section = sections.map(section =>{
+    const section = sections.map((section, index) =>{
       return (
-        <Section {...section} {...this.props}/>
+        <Section key={index} {...section} {...this.props}/>
       )
     });
 
