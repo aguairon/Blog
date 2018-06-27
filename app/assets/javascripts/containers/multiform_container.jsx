@@ -4,9 +4,9 @@ class FormMultipleFieldsContainer extends React.Component {
 
     let name;
     let body;
-    if (props.character.name || props.character.body) {
-      name = props.character.name;
-      body = props.character.body
+    if (props.data.name || props.data.body) {
+      name = props.data.name;
+      body = props.data.body
 
     } else {
       name = "";
@@ -16,10 +16,10 @@ class FormMultipleFieldsContainer extends React.Component {
     this.state = {
       name: name,
       body: body,
-      period_id: props.character.period_id,
+      period_id: props.data.period_id,
       valid_name: true,
       valid_body: true,
-      character_id: props.character.id
+      character_id: props.data.id
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -69,11 +69,15 @@ class FormMultipleFieldsContainer extends React.Component {
     return(
       <FormMultipleFields 
         onSubmit={this.handleSubmit}
-        name={this.state.name} 
         onChange={this.handleChange}
-        valid_name = {this.state.valid_name}
-        body={this.state.body} 
-        valid_body = {this.state.valid_body}
+        field_text={this.state.name} 
+        field_name='name'
+        field_label='Nombre'
+        valid_field = {this.state.valid_name}
+        textarea_text={this.state.body} 
+        textarea_name='body'
+        textarea_label='Vida'
+        valid_textarea = {this.state.valid_body}
       />
     )
   }
