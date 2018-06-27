@@ -1,4 +1,4 @@
-class FormMultipleFieldsContainer extends React.Component {
+class CharacterFormContainer extends React.Component {
   constructor(props) {
     super(props);
 
