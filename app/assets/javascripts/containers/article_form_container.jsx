@@ -19,7 +19,7 @@ class ArticleFormContainer extends React.Component {
       period_id: props.data.period_id,
       valid_title: true,
       valid_text: true,
-      character_id: props.data.id
+      article_id: props.data.id
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -46,7 +46,7 @@ class ArticleFormContainer extends React.Component {
       const article_id = this.state.article_id;
       let url;
       let method;
-      if (this.state.article_ids) {
+      if (this.state.article_id) {
         url = "/articles/" + this.state.article_id;
         method = "PATCH";
       } else {
@@ -70,11 +70,11 @@ class ArticleFormContainer extends React.Component {
       <FormMultipleFields 
         onSubmit={this.handleSubmit}
         onChange={this.handleChange}
-        field_text={this.state.name} 
+        field_text={this.state.title} 
         field_name='title'
         field_label='Título'
         valid_field = {this.state.valid_title}
-        textarea_text={this.state.body} 
+        textarea_text={this.state.text} 
         textarea_name='text'
         textarea_label='Cuerpo del artículo'
         valid_textarea = {this.state.valid_text}
