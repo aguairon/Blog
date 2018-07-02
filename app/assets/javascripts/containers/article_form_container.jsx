@@ -2,16 +2,8 @@ class ArticleFormContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    let title;
-    let text;
-    if (props.data.title || props.data.text) {
-      title = props.data.title;
-      text = props.data.text;
-
-    } else {
-      title = "";
-      text = "";
-    }
+    let title = props.data.title || "";
+    let text = props.data.text || "";
 
     this.state = {
       title: title,
@@ -37,7 +29,7 @@ class ArticleFormContainer extends React.Component {
       if (this.state.title.length < 5) {
         this.setState({valid_title: false});
       } else {
-      this.setState({ valid_text: false });
+        this.setState({ valid_text: false });
       }
     } else {
       const period_id = this.state.period_id;

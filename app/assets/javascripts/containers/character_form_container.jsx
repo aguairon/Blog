@@ -2,16 +2,8 @@ class CharacterFormContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    let name;
-    let body;
-    if (props.data.name || props.data.body) {
-      name = props.data.name;
-      body = props.data.body
-
-    } else {
-      name = "";
-      body = "";
-    }
+    let name = props.data.name || "";
+    let body = props.data.body || "";
 
     this.state = {
       name: name,
@@ -21,6 +13,7 @@ class CharacterFormContainer extends React.Component {
       valid_body: true,
       character_id: props.data.id
     };
+
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -37,13 +30,13 @@ class CharacterFormContainer extends React.Component {
       if (this.state.name.length < 5) {
         this.setState({valid_name: false});
       } else {
-      this.setState({ valid_body: false });
+        this.setState({ valid_body: false });
       }
     } else {
       const period_id = this.state.period_id;
       const name = this.state.name;
       const body = this.state.body;
-      const character_id = this.state.character_id;
+      const character_id = this.state[kind_id];
       let url;
       let method;
       if (this.state.character_id) {
