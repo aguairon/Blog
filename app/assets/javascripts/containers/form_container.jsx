@@ -2,14 +2,8 @@ class FormContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    let title;
-    let id;
-    if (props) {
-      title = props.title;
-      id = props.id;
-    } else {
-      title = "";
-    }
+    let title = props.title || "";
+    let id = props.id || null;
 
     this.state = {
       title: title,
